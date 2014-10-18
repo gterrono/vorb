@@ -1,17 +1,17 @@
-# data = require("./restaurants")
-
-# jsdom = require('jsdom')
-# jsdom.env(
-#   url: "http://www.yelp.com/biz/tortilleria-san-roman-philadelphia"
-#   scripts: ['http://code.jquery.com/jquery-1.5.min.js']
-#   done: (err, window) ->
-#     $ = window.jQuery
-#     console.log($(".review"))
-# )
-
-_ = require('underscore')
 fs = require('fs')
-
 request = require('request')
-url = "http://www.yelp.com/biz/tortilleria-san-roman-philadelphia"
-request(url).pipe(fs.createWriteStream("pages/req.html"))
+
+rs = require('./restaurants.json')
+
+requestLoop = (index=0, offset=0) ->
+  return unless index < rs.length
+  r = rs[index]
+  if offset > r.review_count
+    requestLoop(index + 1)
+    return
+  url = "#{r.url}?sort_by=date_asc&start=#{offset}"
+  request(url).pipe(fs.createWriteStream("html/#{r.id}-#{offset}.html"))
+  setTimeout((-> requestLoop(index, offset + 40)), 3)
+  console.log("index: #{index}, offset: #{offset}")
+
+requestLoop(387, 2000)
