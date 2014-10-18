@@ -1,25 +1,34 @@
+data = require('./restaurants')
 _ = require('underscore')
 fs = require('fs')
+cheerio = require('cheerio')
 
-html = fs.readFileSync("req.html").toString()
+restaurants = []
+parseRestaurant = (name) ->
+  reviews = []
+  for offset in [0...10000] by 40
+    filename = "html/#{name}-#{offset}.html"
+    if not fs.existsSync(filename)
+      break
+    parseFile(filename, reviews)
+  reviews
 
-jsdom = require('jsdom')
+parseFile = (filename, reviews) ->
+  console.log(filename)
+  html = fs.readFileSync(filename).toString()
+  $ = cheerio.load(html)
+  $(".review").each (index, el) ->
+    elem = $(el)
+    review = {}
+    # review['name'] = elem.find(".user-display-name").text()
+    review['date'] = elem.find(".rating-qualifier meta").attr("content")
+    review['rating'] = parseInt(elem.find(".biz-rating meta").attr("content"),10)
+    # review['comment'] = elem.find(".review_comment").text()
+    reviews.push(review)
 
-reviews = []
-jsdom.env(
-  html: html
-  scripts: ['http://code.jquery.com/jquery-1.5.min.js']
-  done: (err, window) ->
-    $ = window.jQuery
-    $(".review").each (index, el) ->
-      elem = $(el)
-      review = {}
-      # review['name'] = elem.find(".user-display-name").text()
-      review['date'] = elem.find(".rating-qualifier meta").attr("content")
-      review['rating'] = parseInt(elem.find(".biz-rating meta").attr("content"),10)
-      # review['comment'] = elem.find(".review_comment").text()
-      console.log(review)
-      reviews.push(review)
-)
-
-console.log(reviews)
+for restaurant in data
+  console.log(name)
+  name = restaurant.id
+  restaurants[name] = parseRestaurant(name)
+  fs.writeFile "rating/#{name}.json", JSON.stringify(restaurants[name]), (err) ->
+    console.log(err) if err?
