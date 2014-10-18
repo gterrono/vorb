@@ -9,9 +9,12 @@ requestLoop = (index=0, offset=0) ->
   if offset > r.review_count
     requestLoop(index + 1)
     return
-  url = "#{r.url}?sort_by=date_asc&start=#{offset}"
-  request(url).pipe(fs.createWriteStream("html/#{r.id}-#{offset}.html"))
+  file_path = "html/#{r.id}-#{offset}.html"
+  size = fs.statSync(file_path).size
+  if size == 0
+    url = "#{r.url}?sort_by=date_asc&start=#{offset}"
+    request(url).pipe(fs.createWriteStream(file_path))
+    console.log("index: #{index}, offset: #{offset}")
   setTimeout((-> requestLoop(index, offset + 40)), 3)
-  console.log("index: #{index}, offset: #{offset}")
 
-requestLoop(387, 2000)
+requestLoop()
