@@ -13,13 +13,18 @@ yelp = require("yelp").createClient({
 
 _ = require('underscore')
 
+fs = require('fs')
+
 restaurants = []
 
 callback = (error, data) ->
   console.log(error)
-  console.log(data)
+  for b in data.businesses
+    restaurants.push b
+  fs.writeFile 'restaurants.json', JSON.stringify(restaurants), (err) ->
+    console.log(err) if err?
+    console.log 'logged'
 
-params = {term: "food", location: "Montreal"}
+params = {category_filter: "restaurants", bounds: '39.979175377662955,-75.11377885937691|39.91337356024762,-75.22158220410347'}
 
-yelp.search(,
-
+yelp.search(params, callback)
