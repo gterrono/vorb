@@ -34,5 +34,13 @@ for id, ratings of require("./ratings.json")
 fs.writeFile "formatted_data.json", JSON.stringify(data), (err) ->
   console.log(err) if err?
 
-for restaurant in _.sortBy(data, (r) -> -r.vorb).slice(0,10)
-  console.log(restaurant)
+for r, index in _.sortBy(data, (r) -> -r.vorb).slice(0,101)
+  console.log("[#{index}] ----------------------------------------------------------")
+  console.log("Name: #{r.name}")
+  console.log("URL: #{r.url}")
+  console.log("Avg rating: #{r.avg_rating.toFixed(2)}")
+  console.log("Total reviews / Recent reviews: #{r.review_count} / #{r.recent_review_count}")
+  console.log("Open date: #{r.open_date}")
+  console.log("VORB: #{(r.avg_rating-3.3).toFixed(2)} * #{Math.log(r.review_count).toFixed(2)} * #{(r.recent_review_count / recentDaysOpen(r)).toFixed(2)} = #{(r.vorb).toFixed(2)}\n")
+
+
