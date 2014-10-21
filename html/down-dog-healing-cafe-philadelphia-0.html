@@ -20,7 +20,7 @@
 
                 yPerfTimings = [];
 
-                    ySitRepParams = {"clientIP": "68.32.36.226", "datacenter": "iad1", "action": "default", "uniqueRequestID": "f3b415a2ac15777d", "isLoggedIn": false, "yuv_record": "aIYrejmsq0eH4yOvIBjctkfFBjBuXckRH-X2ud-Z1daWEGCdzRd3RXZG3TuvjToFTEM2Wjqo5Wq-_uSMaE3JU0HpWr8HYgbD", "servlet": "biz_details", "site": "main", "serverStartTime": 1413668989336};
+                    ySitRepParams = {"clientIP": "68.32.36.226", "datacenter": "iad1", "action": "default", "uniqueRequestID": "1b7d46259c297124", "isLoggedIn": false, "yuv_record": "_u2fR3_69dbJwnWLUrRMkvtVWg3GJxIngOWvqnv0koy_ocDVOPw-8MQyNUFVe31a-67b9o7HqYhXkNSntSQ-82B9g5J4H0-J", "servlet": "biz_details", "site": "main", "serverStartTime": 1413863824082};
                     window.ySitRepParams['initialVisibilityState'] = initialVisibilityState;
 
 
@@ -32,7 +32,7 @@
         ['_setDomainName', "yelp.com"],
         ['_setCustomVar', 1, "User Status", "anonymous", 3],
 
-        ['._setCustomVar', 2, 'from_qype', 'false', 1],
+        ['._setCustomVar', 2, 'integration', '""', 1],
 
         ['_setCustomVar', 4, "account level", "anon", 1],
 
@@ -46,7 +46,7 @@
         ['www._setDomainName', "yelp.com"],
         ['www._setCustomVar', 1, "User Status", "anonymous", 3],
 
-        ['www._setCustomVar', 2, 'from_qype', 'false', 1],
+        ['www._setCustomVar', 2, 'integration', '""', 1],
 
         ['www._setCustomVar', 4, "account level", "anon", 1],
 
@@ -63,7 +63,7 @@
 
             ['domainTracker._setCustomVar', 1, "User Status", "anonymous", 3],
 
-            ['domainTracker._setCustomVar', 2, 'from_qype', 'false', 1],
+            ['domainTracker._setCustomVar', 2, 'integration', '""', 1],
 
             ['domainTracker._setCustomVar', 5, 'content_country', "US", 3],
 
@@ -291,6 +291,9 @@
                 <input autocomplete="off" id="find_desc" maxlength="64" name="find_desc" placeholder="tacos, cheap dinner, Max’s" value="" aria-autocomplete="list" tabindex="1">
             </div>
         </div>
+            <div class="suggestions-list-container search-suggestions-list-container hidden">
+                <ul class="suggestions-list" role="listbox" aria-label="Search results"></ul>
+            </div>
     </div>
 
             <div class="search-field-container with-suggestions-list flex-container-inline near-decorator">
@@ -302,6 +305,9 @@
             </div>
 
         </div>
+            <div class="suggestions-list-container location-suggestions-list-container hidden">
+                <ul class="suggestions-list" role="listbox" aria-label="Search results"></ul>
+            </div>
     </div>
 
         <div class="button-container">
@@ -493,15 +499,25 @@
         </div>
         <div class="biz-page-header-right">
                 <div class="biz-page-actions nowrap">
-        <a href="/writeareview/biz/gRSMrEF92ZsC2MBlUr3iOA?return_url=%2Fbiz%2FgRSMrEF92ZsC2MBlUr3iOA" class="ybtn ybtn-primary ytype war-button"><span  class="i-wrap ig-wrap-common i-war-star-common-wrap"><i  class="i ig-common i-war-star-common"></i> Write a Review</span></a>
-        <span class="ybtn-group clearfix">
-            <a href="/biz_user_photos/gRSMrEF92ZsC2MBlUr3iOA/upload" class="ybtn ybtn-small ytype"><span  class="i-wrap ig-wrap-biz_details i-add-photo-biz_details-wrap"><i  class="i ig-biz_details i-add-photo-biz_details"></i> Add Photo</span></a>
 
-            <a data-pop-uri="/send_to_friend/business/gRSMrEF92ZsC2MBlUr3iOA" data-ro-mode-action="share a business" href="/biz_share?bizid=gRSMrEF92ZsC2MBlUr3iOA&amp;return_url=%2Fbiz%2FgRSMrEF92ZsC2MBlUr3iOA" class="ybtn ybtn-small ytype share-icon js-business-send-to-friend"><span  class="i-wrap ig-wrap-common i-share-common-wrap"><i  class="i ig-common i-share-common"></i>     Share
+
+        <a href="/writeareview/biz/gRSMrEF92ZsC2MBlUr3iOA?return_url=%2Fbiz%2FgRSMrEF92ZsC2MBlUr3iOA" class="ybtn ybtn-primary war-button"><span  class="i-wrap ig-wrap-common i-war-star-common-wrap"><i  class="i ig-common i-war-star-common"></i> Write a Review</span></a>
+
+        <span class="ybtn-group clearfix">
+            <a href="/biz_user_photos/gRSMrEF92ZsC2MBlUr3iOA/upload" class="ybtn ybtn-small add-photo-button"><span  class="i-wrap ig-wrap-biz_details i-add-photo-biz_details-wrap"><i  class="i ig-biz_details i-add-photo-biz_details"></i> Add Photo</span></a>
+
+                        
+
+
+            <a data-pop-uri="/send_to_friend/business/gRSMrEF92ZsC2MBlUr3iOA" data-ro-mode-action="share a business" href="/biz_share?bizid=gRSMrEF92ZsC2MBlUr3iOA&amp;return_url=%2Fbiz%2FgRSMrEF92ZsC2MBlUr3iOA" class="ybtn ybtn-small share-icon js-business-send-to-friend"><span  class="i-wrap ig-wrap-common i-share-common-wrap"><i  class="i ig-common i-share-common"></i>     Share
     <span class="offscreen">, Opens a popup</span>
 </span></a>
 
-                            <a data-ro-mode-action="add a bookmark" href="/signup?return_url=%2Fbiz%2FgRSMrEF92ZsC2MBlUr3iOA" class="ybtn ybtn-small ytype js-bookmark-button not-bookmarked"><span  class="i-wrap ig-wrap-biz_details i-bookmark-biz_details-wrap"><i  class="i ig-biz_details i-bookmark-biz_details"></i>     Bookmark
+                        
+
+
+                
+            <a data-ro-mode-action="add a bookmark" href="/signup?return_url=%2Fbiz%2FgRSMrEF92ZsC2MBlUr3iOA" class="ybtn ybtn-small bookmark-button js-bookmark-button not-bookmarked"><span  class="i-wrap ig-wrap-biz_details i-bookmark-biz_details-wrap"><i  class="i ig-biz_details i-bookmark-biz_details"></i>     Bookmark
     <span class="offscreen">, Opens a popup</span>
 </span></a>
         </span>
@@ -1007,7 +1023,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
                 if (main === null) {
                     throw 'invalid inline script, missing main declaration.';
                 }
-                main("                *{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;background:transparent}body{font-family:arial,'Lucida Grande','Bitstream Vera Sans',verdana,sans-serif;font-size:12px;background:#fff;text-align:left;line-height:1.4;color:#333;overflow:hidden}a{color:#3b65a7;text-decoration:none}a:hover{text-decoration:underline}.wrap{overflow:hidden;padding-bottom:10px;border:1px solid #ebc074;border-right-width:0;border-left-width:0}.wrap.double .inner{clear:both}.wrap.single .ad-block{width:100%}.feedback-link{float:right;margin:5px 10px 0 0;font-size:12px;color:#555}.ad-block{float:left;width:48%;margin-top:-3px;padding-left:10px;font:12px / 15px 'Helvetica Neue',Helvetica,Arial,sans-serif}.ad-block:first-child{padding-left:0;margin-right:10px}.title{font-weight:bold}.url{color:#555}\n\n", "{\"google_language\": \"en\", \"google_ad_channel\": \" 7129511946\", \"google_hints\": \"coffee \\u0026 tea, gluten-free, cafes, philadelphia, pennsylvania, organic, gluten free, coffee \\u0026 tea\", \"yelp_ad_disclaimer_text\": \"Ads by Google\", \"google_page_url\": \"http://www.yelp.com/biz/down-dog-healing-cafe-philadelphia?sort_by=date_asc\", \"google_max_num_ads\": 2, \"google_ad_client\": \"ca-pub-1554273207255362\"}", "(function(){window.google_ad_type=\"text\";window.google_ad_output=\"js\";window.google_feedback=\"on\";for(var a in yGlobals){if(yGlobals.hasOwnProperty(a)){window[a]=yGlobals[a]}}window.google_ad_request_done=function(c){if(c.length===0){return}var f=function(i){var h=i.line2+\" \"+(i.line3||\"\");return['\u003cdiv class=\"ad-block\"\u003e','\u003ca target=\"_blank\" class=\"title\" href=\"',i.url,'\"\u003e',i.line1,\"\u003c/a\u003e\",\"\u003cp\u003e\",h,\"\u003c/p\u003e\",'\u003ca target=\"_blank\" class=\"url\" href=\"',i.url,'\"\u003e',i.visible_url,\"\u003c/a\u003e\",\"\u003c/div\u003e\"].join(\"\")};var e=['\u003ca target=\"_blank\" class=\"feedback-link\" href=\"',window.google_info.feedback_url,'\"\u003e',window.yelp_ad_disclaimer_text,\"\u003c/a\u003e\"].join(\"\");\nvar d=[];for(var b=0;b\u003cc.length;b++){d.push(f(c[b]))}var g=c.length===2?\"double\":\"single\";html=['\u003cdiv class=\"wrap ',g,'\"\u003e',e,'\u003cdiv class=\"inner\"\u003e',d.join(\"\"),\"\u003c/div\u003e\",\"\u003c/div\u003e\"].join(\"\");document.getElementById(\"content\").innerHTML=html;if(window.parent){window.parent.showAdsenseIframe()}}})();");
+                main("                *{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;background:transparent}body{font-family:arial,'Lucida Grande','Bitstream Vera Sans',verdana,sans-serif;font-size:12px;background:#fff;text-align:left;line-height:1.4;color:#333;overflow:hidden}a{color:#3b65a7;text-decoration:none}a:hover{text-decoration:underline}.wrap{overflow:hidden;padding-bottom:10px;border:1px solid #ebc074;border-right-width:0;border-left-width:0}.wrap.double .inner{clear:both}.wrap.single .ad-block{width:100%}.feedback-link{float:right;margin:5px 10px 0 0;font-size:12px;color:#555}.ad-block{float:left;width:48%;margin-top:-3px;padding-left:10px;font:12px / 15px 'Helvetica Neue',Helvetica,Arial,sans-serif}.ad-block:first-child{padding-left:0;margin-right:10px}.title{font-weight:bold}.url{color:#555}\n\n", "{\"google_language\": \"en\", \"google_ad_channel\": \" 7129511946\", \"google_hints\": \"coffee \\u0026 tea, gluten-free, cafes, philadelphia, pennsylvania, gluten free, organic, coffee \\u0026 tea\", \"yelp_ad_disclaimer_text\": \"Ads by Google\", \"google_page_url\": \"http://www.yelp.com/biz/down-dog-healing-cafe-philadelphia?sort_by=date_asc\", \"google_max_num_ads\": 2, \"google_ad_client\": \"ca-pub-1554273207255362\"}", "(function(){window.google_ad_type=\"text\";window.google_ad_output=\"js\";window.google_feedback=\"on\";for(var a in yGlobals){if(yGlobals.hasOwnProperty(a)){window[a]=yGlobals[a]}}window.google_ad_request_done=function(c){if(c.length===0){return}var f=function(i){var h=i.line2+\" \"+(i.line3||\"\");return['\u003cdiv class=\"ad-block\"\u003e','\u003ca target=\"_blank\" class=\"title\" href=\"',i.url,'\"\u003e',i.line1,\"\u003c/a\u003e\",\"\u003cp\u003e\",h,\"\u003c/p\u003e\",'\u003ca target=\"_blank\" class=\"url\" href=\"',i.url,'\"\u003e',i.visible_url,\"\u003c/a\u003e\",\"\u003c/div\u003e\"].join(\"\")};var e=['\u003ca target=\"_blank\" class=\"feedback-link\" href=\"',window.google_info.feedback_url,'\"\u003e',window.yelp_ad_disclaimer_text,\"\u003c/a\u003e\"].join(\"\");\nvar d=[];for(var b=0;b\u003cc.length;b++){d.push(f(c[b]))}var g=c.length===2?\"double\":\"single\";html=['\u003cdiv class=\"wrap ',g,'\"\u003e',e,'\u003cdiv class=\"inner\"\u003e',d.join(\"\"),\"\u003c/div\u003e\",\"\u003c/div\u003e\"].join(\"\");document.getElementById(\"content\").innerHTML=html;if(window.parent){window.parent.showAdsenseIframe()}}})();");
             })();
     </script>
     </div>
@@ -1238,7 +1254,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="617a8c1de2722c9242d11dce3a72c5da468b23bbf0272b70b8b862e802cb80d9">
+                <ul class="big-ufc" data-csrf-token="0d6319265c2ac328c1abe3f5b23bafd2f18e0183656f27a00f4a679b8e9e5b6c">
                         
 
 
@@ -1452,7 +1468,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="617a8c1de2722c9242d11dce3a72c5da468b23bbf0272b70b8b862e802cb80d9">
+                <ul class="big-ufc" data-csrf-token="0d6319265c2ac328c1abe3f5b23bafd2f18e0183656f27a00f4a679b8e9e5b6c">
                         
 
 
@@ -1646,7 +1662,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="617a8c1de2722c9242d11dce3a72c5da468b23bbf0272b70b8b862e802cb80d9">
+                <ul class="big-ufc" data-csrf-token="0d6319265c2ac328c1abe3f5b23bafd2f18e0183656f27a00f4a679b8e9e5b6c">
                         
 
 
@@ -1840,7 +1856,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="617a8c1de2722c9242d11dce3a72c5da468b23bbf0272b70b8b862e802cb80d9">
+                <ul class="big-ufc" data-csrf-token="0d6319265c2ac328c1abe3f5b23bafd2f18e0183656f27a00f4a679b8e9e5b6c">
                         
 
 
@@ -2022,7 +2038,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="617a8c1de2722c9242d11dce3a72c5da468b23bbf0272b70b8b862e802cb80d9">
+                <ul class="big-ufc" data-csrf-token="0d6319265c2ac328c1abe3f5b23bafd2f18e0183656f27a00f4a679b8e9e5b6c">
                         
 
 
@@ -2208,7 +2224,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="617a8c1de2722c9242d11dce3a72c5da468b23bbf0272b70b8b862e802cb80d9">
+                <ul class="big-ufc" data-csrf-token="0d6319265c2ac328c1abe3f5b23bafd2f18e0183656f27a00f4a679b8e9e5b6c">
                         
 
 
@@ -2393,7 +2409,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="617a8c1de2722c9242d11dce3a72c5da468b23bbf0272b70b8b862e802cb80d9">
+                <ul class="big-ufc" data-csrf-token="0d6319265c2ac328c1abe3f5b23bafd2f18e0183656f27a00f4a679b8e9e5b6c">
                         
 
 
@@ -2585,7 +2601,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="617a8c1de2722c9242d11dce3a72c5da468b23bbf0272b70b8b862e802cb80d9">
+                <ul class="big-ufc" data-csrf-token="0d6319265c2ac328c1abe3f5b23bafd2f18e0183656f27a00f4a679b8e9e5b6c">
                         
 
 
@@ -2798,7 +2814,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="617a8c1de2722c9242d11dce3a72c5da468b23bbf0272b70b8b862e802cb80d9">
+                <ul class="big-ufc" data-csrf-token="0d6319265c2ac328c1abe3f5b23bafd2f18e0183656f27a00f4a679b8e9e5b6c">
                         
 
 
@@ -2980,7 +2996,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="617a8c1de2722c9242d11dce3a72c5da468b23bbf0272b70b8b862e802cb80d9">
+                <ul class="big-ufc" data-csrf-token="0d6319265c2ac328c1abe3f5b23bafd2f18e0183656f27a00f4a679b8e9e5b6c">
                         
 
 
@@ -3162,7 +3178,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="617a8c1de2722c9242d11dce3a72c5da468b23bbf0272b70b8b862e802cb80d9">
+                <ul class="big-ufc" data-csrf-token="0d6319265c2ac328c1abe3f5b23bafd2f18e0183656f27a00f4a679b8e9e5b6c">
                         
 
 
@@ -3344,7 +3360,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="617a8c1de2722c9242d11dce3a72c5da468b23bbf0272b70b8b862e802cb80d9">
+                <ul class="big-ufc" data-csrf-token="0d6319265c2ac328c1abe3f5b23bafd2f18e0183656f27a00f4a679b8e9e5b6c">
                         
 
 
@@ -3550,7 +3566,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="617a8c1de2722c9242d11dce3a72c5da468b23bbf0272b70b8b862e802cb80d9">
+                <ul class="big-ufc" data-csrf-token="0d6319265c2ac328c1abe3f5b23bafd2f18e0183656f27a00f4a679b8e9e5b6c">
                         
 
 
@@ -3732,7 +3748,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="617a8c1de2722c9242d11dce3a72c5da468b23bbf0272b70b8b862e802cb80d9">
+                <ul class="big-ufc" data-csrf-token="0d6319265c2ac328c1abe3f5b23bafd2f18e0183656f27a00f4a679b8e9e5b6c">
                         
 
 
@@ -3917,7 +3933,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="617a8c1de2722c9242d11dce3a72c5da468b23bbf0272b70b8b862e802cb80d9">
+                <ul class="big-ufc" data-csrf-token="0d6319265c2ac328c1abe3f5b23bafd2f18e0183656f27a00f4a679b8e9e5b6c">
                         
 
 
@@ -3988,9 +4004,12 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
             <div class="js-make-order" data-ajax-post-url="https://www.yelp.com/transaction_platform/ajax_post_address" data-async-data-url="https://www.yelp.com/transaction_platform/get_async_form_data">
 
         <form method="POST" name="platform_address_check">
-              <input     type="hidden"    name="csrftok"    class="csrftok"    value="75f0b44c3726f6b34afddf9c7d4d9f5044f14bc0e43df98090a799a957d26a4e">
+              <input     type="hidden"    name="csrftok"    class="csrftok"    value="12cd2593af132bbfca43db5532e634322e8e6470c37d9fda50b8398ddee5f00e">
                           <input id="biz_id" name="biz_id" type="hidden" value="gRSMrEF92ZsC2MBlUr3iOA">
             <input id="is_disambiguated" name="is_disambiguated" type="hidden" value="false">
+                <p class="message">
+                    <small>This restaurant opens <strong>Tuesday at 7:00 am</strong></small>
+                </p>
                 <input id="order_type" name="order_type" type="hidden" value="delivery">
                 <input class="js-delivery-address-field" id="delivery_address" name="delivery_address" placeholder="1 Yelp St., Chicago, IL 60601" type="text" value="">
             <p class="text-error js-address-error-message hidden"></p>
@@ -4009,15 +4028,15 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
             <ul class="iconed-list">
                         <li class="biz-hours iconed-list-item">
             <div class="iconed-list-avatar">
-                    <i  class="i ig-biz_details i-clock-open-biz_details"></i>
+                    <i  class="i ig-biz_details i-clock-closed-biz_details"></i>
             </div>
             <div class="iconed-list-story">
                 <span>
                     Today
-                    <span class="hour-range"><span class="nowrap">8:00 am</span> - <span class="nowrap">7:00 pm</span></span>
+                    <span class="hour-range"><span class="nowrap">7:00 am</span> - <span class="nowrap">7:00 pm</span></span>
                 </span>
 
-                    <span class="nowrap extra open">Open now</span>
+                    <span class="nowrap extra closed">Closed now</span>
             </div>
         </li>
 
@@ -4082,6 +4101,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
                             <span class="nowrap">7:00 am</span> - <span class="nowrap">7:00 pm</span>
                         </td>
                         <td class="extra">
+                                <span class="nowrap closed">Closed now</span>
                         </td>
                     </tr>
                     <tr>
@@ -4122,7 +4142,6 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
                             <span class="nowrap">8:00 am</span> - <span class="nowrap">7:00 pm</span>
                         </td>
                         <td class="extra">
-                                <span class="nowrap open">Open now</span>
                         </td>
                     </tr>
                     <tr>
@@ -4370,7 +4389,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
 
 
                 <span class="review-count rating-qualifier">
-            67 reviews
+            66 reviews
     </span>
 
         </div>
@@ -4445,38 +4464,6 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
 
 
     <div class="photo-box pb-60s">
-                <a href="/list/the-yelp-100-challenge-philadelphia-145">
-            
-
-    <img alt="Zoe P." class="photo-box-img" height="60" src="//s3-media4.fl.yelpcdn.com/photo/Hu1DBqwGQAyzme4OXEci-g/60s.jpg" width="60">
-
-        </a>
-
-    </div>
-
-
-        </div>
-        <div class="media-story">
-            <div class="media-title">
-                    <a href="/list/the-yelp-100-challenge-philadelphia-145">
-        The Yelp 100 Challenge
-    </a>
-
-            </div>
-            <q>
-                I&#39;ll be damned if I don&#39;t write at least 100 reviews/updates this…
-            </q>
-        </div>
-    </div>
-
-                    </li>
-                    <li>
-                            <div class="media-block media-block-large clearfix">
-        <div class="media-avatar">
-                
-
-
-    <div class="photo-box pb-60s">
                 <a href="/list/the-yelp-100-challenge-philadelphia-198">
             
 
@@ -4502,6 +4489,38 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
     </div>
 
                     </li>
+                    <li>
+                            <div class="media-block media-block-large clearfix">
+        <div class="media-avatar">
+                
+
+
+    <div class="photo-box pb-60s">
+                <a href="/list/the-yelp-100-challenge-philadelphia-145">
+            
+
+    <img alt="Zoe P." class="photo-box-img" height="60" src="//s3-media4.fl.yelpcdn.com/photo/Hu1DBqwGQAyzme4OXEci-g/60s.jpg" width="60">
+
+        </a>
+
+    </div>
+
+
+        </div>
+        <div class="media-story">
+            <div class="media-title">
+                    <a href="/list/the-yelp-100-challenge-philadelphia-145">
+        The Yelp 100 Challenge
+    </a>
+
+            </div>
+            <q>
+                I&#39;ll be damned if I don&#39;t write at least 100 reviews/updates this…
+            </q>
+        </div>
+    </div>
+
+                    </li>
             </ul>
             <a class="link-more" href="/list_search?location=Philadelphia%2C+PA&amp;q=Coffee+%26+Tea&amp;sort=relevance">More Lists</a>
         </div>
@@ -4519,10 +4538,10 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
             <h3>People Viewed This After Searching For…</h3>
             <ul class="ylist">
                     <li>
-                            <a href="http://www.yelp.com/search?find_desc=Organic&amp;find_loc=Philadelphia%2C+PA">Organic Philadelphia</a>
+                            <a href="http://www.yelp.com/search?find_desc=Gluten+Free&amp;find_loc=Philadelphia%2C+PA">Gluten Free Philadelphia</a>
                     </li>
                     <li>
-                            <a href="http://www.yelp.com/c/philadelphia/gluten_free">Gluten Free Philadelphia</a>
+                            <a href="http://www.yelp.com/search?find_desc=Organic&amp;find_loc=Philadelphia%2C+PA">Organic Philadelphia</a>
                     </li>
                     <li>
                             <a href="http://www.yelp.com/c/philadelphia/coffee">Coffee &amp; Tea Philadelphia</a>
@@ -4597,7 +4616,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
 
 
             <!-- google_ad_section_start(weight=ignore) -->
-<!-- <a href="/biz/outlook-autumn-market-fundamental-catwalk-flimsy-roost-legibility-individualism-grocer-predestination-7">yelp</a> -->
+<!-- <a href="/biz/outlook-autumn-market-fundamental-catwalk-flimsy-roost-legibility-individualism-grocer-predestination-4">yelp</a> -->
 
     <div class="footer">
         <div class="footer-wrap">
@@ -5046,7 +5065,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
 
 <script type="text/javascript">
                 
-                yConfig = {"bingMapsUrl": "https://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0\u0026mkt=en-US\u0026s=1\u0026onscriptload=", "cookies": {"ADMIN_SEARCH_USERDATA_RADIUS": "udr", "RECENT_LOCATIONS": "recentlocations", "SEARCH_PREFS": "searchPrefs", "JS_TRACK": "js_track", "YUV": "yuv", "DEBUG": "debug", "SELECTED_ACTIVITY_FEED": "fd", "SIGNUP_TRACK": "strack", "EXPR_OVERRIDE": "expr", "COOKIE_INFO": "cim", "LOCATION": "location", "ADMIN_CM_SCOREBOARD_SETTINGS": "acms", "SEARCH_SUGGEST_INFO": "search_suggest", "ADMIN_BUSINESS_ATTRIBUTE_CHANGESET_UTILS_PREFS": "bap", "ADMIN_SEARCH_USERDATA_LOCATION": "udl", "ADMIN_SEARCH_USERDATA": "ud", "DISMISSIBLE_MESSAGE_COOKIE": "dm", "USED_LOCALE_SELECTOR": "used_locale_selector", "PRIVACY_POLICY_NOTICE": "ppn", "HIDE_BROWSER_BAR": "hidebrowserbar", "SUGGEST_COOKIE": "ssi", "MESSAGE_SENDER_PASSED_CAPTCHA": "mspc", "QUANTCAST": "qntcst"}, "googDebugLevel": "OFF", "cdn": {"hostnamePattern": {"s3": "s3-media%s.fl.yelpcdn.com", "yelp": "media%s.fl.yelpcdn.com"}, "shardCount": 4}, "enabledSitRepChannels": {"quick_reservation": true, "biz_map_view": true, "biz_directions": true, "call_to_action": true}, "spinnerURLSmall": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/294d5d03032e/loaders/small-throbber.gif", "uniqueRequestId": "f3b415a2ac15777d", "googleMapsUrl": "//maps.googleapis.com/maps/api/js?client=gme-yelp\u0026language=en\u0026sensor=false", "yelpcodeTemplateVersion": "dd3d29c265", "isLoggedIn": false, "imageUrls": {"mapMarkers": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/61a4c5ed6fcc/map/map_markers_sprite.png", "stars": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/c2252a4cd43e/ico/stars/v2/stars_map.png"}, "mapMarkerSerial": "20140220", "countryNameList": ["argentina", "australia", "austria", "belgium", "brazil", "canada", "chile", "czech republic", "denmark", "finland", "france", "germany", "hong kong", "ireland", "italy", "japan", "mexico", "new zealand", "norway", "poland", "portugal", "singapore", "spain", "sweden", "switzerland", "netherlands", "turkey", "uk", "usa"], "isSitRepEnabled": true, "comscore": {"c15": "", "c3": "", "c2": 7130511, "c1": 2, "c6": "", "c5": "", "c4": ""}, "enableHighVolumeGAEvents": true, "isClientErrorsEnabled": false, "spinnerURLLarge": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/049247849df0/loaders/throbber.gif", "vendorExternalURLs": {}, "cookieDomain": ".www.yelp.com", "recaptchaPublicKey": "6Lc2978SAAAAADHkLB3mdFpNLLfBP5CYnqlR0gz6", "isLive": true, "bingMapsKey": "AjhDhG82AEA_I4CdC-0o2DTDxg1Ojh0AZdcp_o-IbNuJGlb5fMMrig728eetoW8S"};
+                yConfig = {"bingMapsUrl": "https://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0\u0026mkt=en-US\u0026s=1\u0026onscriptload=", "cookies": {"ADMIN_SEARCH_USERDATA_RADIUS": "udr", "RECENT_LOCATIONS": "recentlocations", "SEARCH_PREFS": "searchPrefs", "JS_TRACK": "js_track", "YUV": "yuv", "DEBUG": "debug", "SELECTED_ACTIVITY_FEED": "fd", "SIGNUP_TRACK": "strack", "EXPR_OVERRIDE": "expr", "COOKIE_INFO": "cim", "LOCATION": "location", "ADMIN_CM_SCOREBOARD_SETTINGS": "acms", "SEARCH_SUGGEST_INFO": "search_suggest", "ADMIN_BUSINESS_ATTRIBUTE_CHANGESET_UTILS_PREFS": "bap", "ADMIN_SEARCH_USERDATA_LOCATION": "udl", "ADMIN_SEARCH_USERDATA": "ud", "DISMISSIBLE_MESSAGE_COOKIE": "dm", "USED_LOCALE_SELECTOR": "used_locale_selector", "PRIVACY_POLICY_NOTICE": "ppn", "HIDE_BROWSER_BAR": "hidebrowserbar", "SUGGEST_COOKIE": "ssi", "MESSAGE_SENDER_PASSED_CAPTCHA": "mspc", "QUANTCAST": "qntcst"}, "googDebugLevel": "OFF", "cdn": {"hostnamePattern": {"s3": "s3-media%s.fl.yelpcdn.com", "yelp": "media%s.fl.yelpcdn.com"}, "shardCount": 4}, "enabledSitRepChannels": {"quick_reservation": true, "biz_map_view": true, "biz_directions": true, "call_to_action": true}, "spinnerURLSmall": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/294d5d03032e/loaders/small-throbber.gif", "uniqueRequestId": "1b7d46259c297124", "googleMapsUrl": "//maps.googleapis.com/maps/api/js?client=gme-yelp\u0026language=en\u0026sensor=false", "yelpcodeTemplateVersion": "f4dbd8669e", "isLoggedIn": false, "imageUrls": {"mapMarkers": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/61a4c5ed6fcc/map/map_markers_sprite.png", "stars": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/c2252a4cd43e/ico/stars/v2/stars_map.png"}, "mapMarkerSerial": "20140220", "countryNameList": ["argentina", "australia", "austria", "belgium", "brazil", "canada", "chile", "czech republic", "denmark", "finland", "france", "germany", "hong kong", "ireland", "italy", "japan", "mexico", "new zealand", "norway", "poland", "portugal", "singapore", "spain", "sweden", "switzerland", "netherlands", "turkey", "uk", "usa"], "isSitRepEnabled": true, "comscore": {"c15": "", "c3": "", "c2": 7130511, "c1": 2, "c6": "", "c5": "", "c4": ""}, "enableHighVolumeGAEvents": false, "isClientErrorsEnabled": false, "spinnerURLLarge": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/049247849df0/loaders/throbber.gif", "vendorExternalURLs": {}, "cookieDomain": ".www.yelp.com", "recaptchaPublicKey": "6Lc2978SAAAAADHkLB3mdFpNLLfBP5CYnqlR0gz6", "isLive": true, "bingMapsKey": "AjhDhG82AEA_I4CdC-0o2DTDxg1Ojh0AZdcp_o-IbNuJGlb5fMMrig728eetoW8S"};
 
 </script>
             
@@ -5077,14 +5096,14 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
 
             <script src="http://s3-media4.fl.yelpcdn.com/assets/2/www/js/d56bd43138e5/assets/vendor_external/LAB.min.js"></script><script>$LAB.script("//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
 .wait(function() {if(document.readyState === 'interactive') jQuery.ready();})
-.script("//s3-media4.fl.yelpcdn.com/assets/2/www/js/400f5736c4bb/assets/module_core-en_US.min.js")
+.script("//s3-media4.fl.yelpcdn.com/assets/2/www/js/e2c55ca71386/assets/module_core-en_US.min.js")
 .wait(function() {
                 yConfig.vendorExternalURLs["easyXDM"]=['//s3-media4.fl.yelpcdn.com/assets/2/www/js/62199ef9e869/assets/vendor_external/easyXDM.min.js']
                 
                 yConfig.vendorExternalURLs["plugin-detect"]=['//s3-media4.fl.yelpcdn.com/assets/2/www/js/bfd62b330c7a/assets/vendor_external/plugin-detect-0.6.3.min.js']
-                yelp.www.init.initSearchSuggest("#find_desc", ".find-decorator", "#dropperText_Mast", false, false);
-yelp.www.init.initLocationSuggest("#dropperText_Mast", ".near-decorator", true, false);
-yelp.www.init.initGAUniversal({"domain": "yelp.com", "dimensions": {"1": "anon", "7": "True", "8": "False", "9": "10", "10": "40", "11": "coffee, gluten_free, cafes", "12": "68", "14": "False", "15": "US"}, "enable_high_volume_events": true, "trackers": {"www": "UA-30501-55"}, "js_dimensions": [16], "clientID": "7A60B3362805E58F"}, [], null);
+                yelp.www.init.initSearchSuggest("#find_desc", ".find-decorator", "#dropperText_Mast", true, true);
+yelp.www.init.initLocationSuggest("#dropperText_Mast", ".near-decorator", true, true);
+yelp.www.init.initGAUniversal({"domain": "yelp.com", "dimensions": {"1": "anon", "7": "True", "8": "False", "9": "10", "10": "40", "11": "coffee, gluten_free, cafes", "12": "70", "14": "", "15": "US"}, "enable_high_volume_events": false, "trackers": {"www": "UA-30501-55"}, "js_dimensions": [16], "clientID": "E227AA5129FA3EBC"}, [], null);
 yelp.www.init.initNavItemTracking();
 yelp.www.init.initTimeOnPageAnalytics();
 yelp.init.initLocaleSelector("#language-selector-wrap");
@@ -5094,10 +5113,10 @@ yelp.pages.init();
 yelp.www.init.facebook(97534753161, "//connect.facebook.net/en_US/all.js");
 yelp.www.init.quantcast();
 })
-.script("//s3-media1.fl.yelpcdn.com/assets/2/www/js/60a72aa69c8e/assets/module_biz_details-en_US.min.js")
-.wait(function() {yelp.www.init.biz_details.initBookmark(false, "/bookmark/remove_biz_confirm", "2c1bebaf4b68267a5c4dcdfaa43d78c028e56931b43d754b0694e7f41a9cc123", "63db2e16420d1f11e63adb71efa09721422aed96684c165d0f5bc16507ebaedb");
-yelp.www.init.biz_details.sendToFriend("db7747c9666b967a78c8568e7763d031919fa5082cfcb623bb117b7c6dd66880");
-yelp.www.init.biz_details.reservations("82f8a8f9ad97ca4512d6e8c1ee5fd361a927f0d05dd43103aa0812f7bb1588e0");
+.script("//s3-media1.fl.yelpcdn.com/assets/2/www/js/299bef62dd02/assets/module_biz_details-en_US.min.js")
+.wait(function() {yelp.www.init.biz_details.initBookmark(false, "/bookmark/remove_biz_confirm", "a49b0a209fa4b01bd657e137237ebab8cbb0c11d2aabaada932daf62cca7246e", "d6fbd9b13142c82245ab99b3fe8efdb6cf4b8c21e40784de77edb2c01271d2f1");
+yelp.www.init.biz_details.sendToFriend("97bf98b2e6da1d361e239e57413ae5bb04953854000cb29f8acbb2d5ce34723c");
+yelp.www.init.biz_details.reservations("e1556ea623105f9fbe53f9f1b75defb0f59d41c9cf27a3bf11493155853eb2ce");
 yelp.www.init.biz_details.initEditCategory(true);
 yelp.www.init.biz_details.initPlatform();
 yelp.www.init.biz_details.initMapLightbox();
@@ -5140,7 +5159,7 @@ $LAB.script("//sb.scorecardresearch.com/beacon.js")
                 if (main === null) {
                     throw 'invalid inline script, missing main declaration.';
                 }
-                main("f3b415a2ac15777d");
+                main("1b7d46259c297124");
             })();
     </script>
 
@@ -5166,88 +5185,7 @@ $LAB.script("//sb.scorecardresearch.com/beacon.js")
 
 <script type="text/javascript">
             
-                yConfig.csrf = {"UserFollow": "de8d170df849704e333e79ab53098b0594a426a4166850a39f70b70f5682d7fc", "SitRep": "45a8416dc83f47fcd6064d8875a81f3bd5a7c0afa311808bcf1fe742d918623c"};
-
-</script>
-
-    </body>
-</html>l>&& window.COMSCORE['beacon']) {
-                    window.COMSCORE['beacon']({'c15': '', 'c3': '', 'c2': 7130511, 'c1': 2, 'c6': '', 'c5': '', 'c4': ''});
-                }
-                })
-</script>
-
-        <script type="text/javascript">
-            (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = "http://www.google-analytics.com/ga.js";
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-
-</script>
-
-
-
-        <script>
-            (function() {
-                var main = null;
-
-                var main=function loadSpice(a){var b=new Image();if(!document.webkitHidden){b.src=["/sp","ice?","r=",a,"&pagevis","=0"].join("")}else{var c=false;document.addEventListener("webkitvisibilitychange",function(){if(document.webkitHidden||c){return}c=true;b.src=["/s","pice","?r=",a,"&","pagevis=1"].join("")})}};
-
-                if (main === null) {
-                    throw 'invalid inline script, missing main declaration.';
-                }
-                main("766c42cbeaddb983");
-            })();
-    </script>
-
-
-                <script>
-            (function() {
-                var main = null;
-
-                var main=function(){var a=new Image(1,1);a.onerror=a.onload=function(){a.onerror=a.onload=null};a.src=["//secure-us.imrworldwide.com/cgi-bin/m?ci=us-804377h&cg=0&cc=1&si=",escape(window.location.href),"&rp=",escape(document.referrer),"&ts=compact&rnd=",(new Date()).getTime()].join("")};
-
-                if (main === null) {
-                    throw 'invalid inline script, missing main declaration.';
-                }
-                main();
-            })();
-    </script>
-        <noscript>
-                <img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-804377h&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt="">
-        </noscript>
-
-
-
-
-<script type="text/javascript">
-            
-                yConfig.csrf = {"UserFollow": "c2610d2bae646fb857fdaf70b6212c1b78390aaac67e41e04d7d02ca39123e91", "SitRep": "dcaac0be89a988e006fa6deb285eba13b503de916abc1e95c1f7c88ee3edba7e"};
-
-</script>
-
-<script type="text/javascript">
-                
-                    window.yPerfTimings.push(["body:end", (new Date()).getTime()]);
-
-</script>
-    </body>
-</html>                throw 'invalid inline script, missing main declaration.';
-                }
-                main();
-            })();
-    </script>
-        <noscript>
-                <img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-804377h&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt="">
-        </noscript>
-
-
-
-
-<script type="text/javascript">
-            
-                yConfig.csrf = {"UserFollow": "335581108c640e0803289ce61467e56586a5fbbc19a890b6b2ca8e01d090e7b4", "SitRep": "0b4572e41baf6cbb912d78d633e2aed21d49c8b012637d6476ff50aa7df56c8a"};
+                yConfig.csrf = {"UserFollow": "9f0c99bdf285a375ec82cdc79e9b52e1df759273a8fa7ef98186cc1a0ad4305a", "SitRep": "bd2e0aa43ae7b0e0b9c2d9e38dbee8a3d7415626cc28bb730c816e2caf136b92"};
 
 </script>
 

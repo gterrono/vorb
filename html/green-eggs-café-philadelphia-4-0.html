@@ -6,6 +6,23 @@
 <!--[if IE 9 ]>    <html xmlns:fb="http://www.facebook.com/2008/fbml" class="ie9 ie no-js" lang="en"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html xmlns:fb="http://www.facebook.com/2008/fbml" class="no-js" lang="en"> <!--<![endif]-->
     <head>
+            <script>
+            (function() {
+                var main = null;
+
+                var main=function(a){window.onerror=(function(){var c=function(e){return function(){var f;if(Array.prototype.toJSON){f=Array.prototype.toJSON;delete Array.prototype.toJSON}e.apply(this,arguments);if(f){Array.prototype.toJSON=f}}};var d=function(){for(var e=0;e<arguments.length;e++){if(arguments[e]!==undefined){return arguments[e]}}};var b=function(p,u,n){var v=window.event||{};var o=v.timeStamp||new Date().getTime();var f=d(window.location.href,null);var i=d(document.referrer,null);var s=null;u=d(v.filename,u,null);
+n=d(v.lineno,n,null);var l=function(B){try{var A;if(B&&B.nodeName&&B.nodeType&&B.nodeType===1){A=["<",B.nodeName.toLowerCase()];if(B.id){A.push(" id="+B.id)}if(B.className){A.push(" class="+B.className)}A.push(">");return A.join("")}}catch(C){return"(access denied)"}try{JSON.stringify(B);return B}catch(C){return"(cannot stringify)"}};var m=function(D){var B={};try{for(var A in D){B[A]=l(D[A])}}catch(C){return"Iteration on the message object failed: "+C}B.__toString=Object.prototype.toString.call(D);
+return B};var t=true;try{t=(p instanceof String||typeof p==="string")}catch(w){p="Couldn't determine the type of message received. Reason: "+w}var x=function(A,e){return A.slice(0,e.length)===e};if(t){var k=(x(p,"uncaught exception: CustomError: Error in protected function:")||x(p,"CustomError: Error in protected function:")||(u===""&&n===0&&p==="Script error."));if(k){return}}else{try{s=m(p)}catch(w){s="Message dump failed. Reason: "+w}p="Caught a non-string message."}var g=new XMLHttpRequest();
+var j=null;if(!!window.jQuery){j="jquery"}if(!!window.Prototype){j="prototype"}var z={errors:[{context:["Exception in un-protected function"],date:new Date(o).toGMTString(),load_secs:-1,message:p,extra:s,ready_state:document.readyState,lineNumber:n,fileName:u}],location:f,referrer:i,js_lib:j,yelpcode_template_version:a};var h=(document.getElementsByTagName("html")[0].getAttribute("webdriver")==="true");if(h){document.body.innerHTML="<h1>Javascript Error Detected</h1>";var r=document.createElement("div");
+r.setAttribute("id","pastebinTraceback");var q=document.createElement("code");var y;try{y=document.createTextNode("JS ERROR DETECTED\n"+window.JSON.stringify(z,null,2))}catch(w){y=document.createTextNode("JS ERROR DETECTED\nCannot JSON.stringify error -- Exception in un-protected function : "+p)}q.appendChild(y);r.appendChild(q);document.getElementsByTagName("body")[0].appendChild(r)}z=JSON.stringify(z);z=encodeURIComponent(z);g.open("POST","/client_errors",true);g.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+g.setRequestHeader("X-Requested-With","XMLHttpRequest");g.send("json="+z)};return c(b)})()};
+
+                if (main === null) {
+                    throw 'invalid inline script, missing main declaration.';
+                }
+                main("f4dbd8669e");
+            })();
+    </script>
 
 
 <script type="text/javascript">
@@ -20,12 +37,9 @@
 
                 yPerfTimings = [];
 
-                    ySitRepParams = {"clientIP": "68.32.36.226", "datacenter": "iad1", "action": "default", "uniqueRequestID": "3f4113698c314f41", "isLoggedIn": false, "yuv_record": "2vwWA3W5PFXCwNKHRcXyVimNbTuDzSBXT5ebqV4Eh_xz_X5uBWK17oEhqgRlrKxKyoKWxEO-m-Mn9IzplHLwLjgxtK3yFBFU", "servlet": "biz_details", "site": "main", "serverStartTime": 1413667850263};
+                    ySitRepParams = {"clientIP": "68.32.36.226", "datacenter": "iad1", "action": "default", "uniqueRequestID": "d955a6a666e08e7f", "isLoggedIn": false, "yuv_record": "qJQ6ELUuwGynX3DmQDPXnKVLAsxyho_AyiYtIH41-kvakp_wlSITmsXh8ChtFC3FAwt6DZjLymyNScO9P3QGRTC0KTZdjwEM", "servlet": "biz_details", "site": "main", "serverStartTime": 1413863723358};
                     window.ySitRepParams['initialVisibilityState'] = initialVisibilityState;
 
-                        var start = new Date().getTime();
-                        yPerfTimings.push(["head:start", start]);
-                        window.yPerfTimings.push(["JS_TIMING:modules_executed:start", start]);
 
                 window._gaq = window._gaq || [];
 
@@ -35,7 +49,7 @@
         ['_setDomainName', "yelp.com"],
         ['_setCustomVar', 1, "User Status", "anonymous", 3],
 
-        ['._setCustomVar', 2, 'from_qype', 'false', 1],
+        ['._setCustomVar', 2, 'integration', '""', 1],
 
         ['_setCustomVar', 4, "account level", "anon", 1],
 
@@ -49,7 +63,7 @@
         ['www._setDomainName', "yelp.com"],
         ['www._setCustomVar', 1, "User Status", "anonymous", 3],
 
-        ['www._setCustomVar', 2, 'from_qype', 'false', 1],
+        ['www._setCustomVar', 2, 'integration', '""', 1],
 
         ['www._setCustomVar', 4, "account level", "anon", 1],
 
@@ -66,7 +80,7 @@
 
             ['domainTracker._setCustomVar', 1, "User Status", "anonymous", 3],
 
-            ['domainTracker._setCustomVar', 2, 'from_qype', 'false', 1],
+            ['domainTracker._setCustomVar', 2, 'integration', '""', 1],
 
             ['domainTracker._setCustomVar', 5, 'content_country', "US", 3],
 
@@ -82,7 +96,7 @@
     <meta http-equiv="Content-Language" content="en" />
 
 
-                <meta name="description" content="396 Reviews of Green Eggs Café &#34;Full disclosure: The cafe owner is my landlord, and I was invited to a complimentary tasting the week before the restaurant opened. I&#39;m not actually sure how Yelp&#39;s ethics rules apply in my case.  Anyway, I&#39;ve been…"/>
+                <meta name="description" content="397 Reviews of Green Eggs Café &#34;Full disclosure: The cafe owner is my landlord, and I was invited to a complimentary tasting the week before the restaurant opened. I&#39;m not actually sure how Yelp&#39;s ethics rules apply in my case.  Anyway, I&#39;ve been…"/>
 
 
                 <meta name="keywords" content="Yelp,recommendation,San Francisco, bay area, local,business,review,friend,restaurant,dentist,doctor,salon,spa,shopping,store,share,community,massage,sushi,pizza,nails,New York,Los Angeles">
@@ -194,20 +208,10 @@
         
             <title>Green Eggs Café - Newbold - Philadelphia, PA | Yelp</title>
 
-<script type="text/javascript">
-                
-                    window.yPerfTimings.push(["head:css:start", (new Date()).getTime()]);
-
-</script>
 
             <link rel="stylesheet" type="text/css" media="all" href="http://s3-media4.fl.yelpcdn.com/assets/2/www/css/1e1ac85466d3/www-pkg.css">
     <link rel="stylesheet" type="text/css" media="all" href="http://s3-media4.fl.yelpcdn.com/assets/2/www/css/d088bf703ef2/baz-pkg.css">
 
-<script type="text/javascript">
-                
-                    window.yPerfTimings.push(["head:css:end", (new Date()).getTime()]);
-
-</script>
 
 
             <script>
@@ -220,7 +224,7 @@
                 if (main === null) {
                     throw 'invalid inline script, missing main declaration.';
                 }
-                main(true, [["attrtakeou", "yes"], ["attrambian", ["casual"]], ["attrgrupok", "yes"], ["attrreserv", "no"], ["attrwaiter", "yes"], ["attrdelivr", "no"], ["category", ["restaurant"]], ["city", "Philadelph"], ["attrdogsok", "no"], ["attralcoho", "no"], ["attraccess", "yes"], ["section", "bizprofile"], ["zipcode", "19147"], ["dma_code", "504"], ["signed_in", "no"], ["attrkidsok", "yes"], ["attrrating", "4.0"], ["attroutdor", "yes"], ["attrnoise", "average"], ["scategory2", ["breakfast_", "newamerica"]], ["attrparkin", ["street"]], ["attrcredit", "no"], ["attrcater", "yes"], ["attrprice", "2"], ["attrsmeals", ["brunch"]], ["bizid", "rYqmaOIULRouz_1db07OdQ"], ["language", "en"], ["country", "us"], ["sk", "no"], ["attrattire", "casual"], ["mode", "live"], ["attrhastv", "yes"], ["attrwifi", "free"]], "live", false);
+                main(true, [["attrtakeou", "yes"], ["attrambian", ["casual"]], ["attrgrupok", "yes"], ["attroutdor", "yes"], ["attrwaiter", "yes"], ["attrdelivr", "no"], ["category", ["restaurant"]], ["city", "Philadelph"], ["attrcredit", "no"], ["attralcoho", "no"], ["attraccess", "yes"], ["section", "bizprofile"], ["zipcode", "19147"], ["dma_code", "504"], ["signed_in", "no"], ["attrkidsok", "yes"], ["attrrating", "4.0"], ["attrreserv", "no"], ["attrnoise", "average"], ["scategory2", ["breakfast_", "newamerica"]], ["attrparkin", ["street"]], ["attrdogsok", "no"], ["attrcater", "yes"], ["attrprice", "2"], ["attrsmeals", ["brunch"]], ["bizid", "rYqmaOIULRouz_1db07OdQ"], ["language", "en"], ["country", "us"], ["sk", "no"], ["attrattire", "casual"], ["mode", "live"], ["attrhastv", "yes"], ["attrwifi", "free"]], "live", false);
             })();
     </script><script>
             (function() {
@@ -238,8 +242,6 @@
 
 <script type="text/javascript">
                 
-                        window.yPerfTimings.push(["head:end", (new Date()).getTime()]);
-
 
 </script>
 
@@ -263,11 +265,6 @@
 
 
     <body id="yelp_main_body" class="country-us logged-out ytype borderless biz-details jquery">
-<script type="text/javascript">
-                
-                    window.yPerfTimings.push(["body:start", (new Date()).getTime()]);
-
-</script>
 
             <div id="fb-root"></div>
 
@@ -352,12 +349,7 @@
         </div>
     </form>
 
-    <script type="text/javascript">
-            
-                window.yPerfTimings.push(["search_bar:rendered", (new Date()).getTime()]);
-
-</script>
-
+    
 
 
                         <div class="header-account webview-hidden">
@@ -474,7 +466,7 @@
 
 
                     <span class="review-count rating-qualifier">
-            <span itemprop="reviewCount">396</span> reviews
+            <span itemprop="reviewCount">397</span> reviews
     </span>
 
         </div>
@@ -519,15 +511,25 @@
         </div>
         <div class="biz-page-header-right">
                 <div class="biz-page-actions nowrap">
-        <a href="/writeareview/biz/rYqmaOIULRouz_1db07OdQ?return_url=%2Fbiz%2FrYqmaOIULRouz_1db07OdQ" class="ybtn ybtn-primary ytype war-button"><span  class="i-wrap ig-wrap-common i-war-star-common-wrap"><i  class="i ig-common i-war-star-common"></i> Write a Review</span></a>
-        <span class="ybtn-group clearfix">
-            <a href="/biz_user_photos/rYqmaOIULRouz_1db07OdQ/upload" class="ybtn ybtn-small ytype"><span  class="i-wrap ig-wrap-biz_details i-add-photo-biz_details-wrap"><i  class="i ig-biz_details i-add-photo-biz_details"></i> Add Photo</span></a>
 
-            <a data-pop-uri="/send_to_friend/business/rYqmaOIULRouz_1db07OdQ" data-ro-mode-action="share a business" href="/biz_share?bizid=rYqmaOIULRouz_1db07OdQ&amp;return_url=%2Fbiz%2FrYqmaOIULRouz_1db07OdQ" class="ybtn ybtn-small ytype share-icon js-business-send-to-friend"><span  class="i-wrap ig-wrap-common i-share-common-wrap"><i  class="i ig-common i-share-common"></i>     Share
+
+        <a href="/writeareview/biz/rYqmaOIULRouz_1db07OdQ?return_url=%2Fbiz%2FrYqmaOIULRouz_1db07OdQ" class="ybtn ybtn-primary war-button"><span  class="i-wrap ig-wrap-common i-war-star-common-wrap"><i  class="i ig-common i-war-star-common"></i> Write a Review</span></a>
+
+        <span class="ybtn-group clearfix">
+            <a href="/biz_user_photos/rYqmaOIULRouz_1db07OdQ/upload" class="ybtn ybtn-small add-photo-button"><span  class="i-wrap ig-wrap-biz_details i-add-photo-biz_details-wrap"><i  class="i ig-biz_details i-add-photo-biz_details"></i> Add Photo</span></a>
+
+                        
+
+
+            <a data-pop-uri="/send_to_friend/business/rYqmaOIULRouz_1db07OdQ" data-ro-mode-action="share a business" href="/biz_share?bizid=rYqmaOIULRouz_1db07OdQ&amp;return_url=%2Fbiz%2FrYqmaOIULRouz_1db07OdQ" class="ybtn ybtn-small share-icon js-business-send-to-friend"><span  class="i-wrap ig-wrap-common i-share-common-wrap"><i  class="i ig-common i-share-common"></i>     Share
     <span class="offscreen">, Opens a popup</span>
 </span></a>
 
-                            <a data-ro-mode-action="add a bookmark" href="/signup?return_url=%2Fbiz%2FrYqmaOIULRouz_1db07OdQ" class="ybtn ybtn-small ytype js-bookmark-button not-bookmarked"><span  class="i-wrap ig-wrap-biz_details i-bookmark-biz_details-wrap"><i  class="i ig-biz_details i-bookmark-biz_details"></i>     Bookmark
+                        
+
+
+                
+            <a data-ro-mode-action="add a bookmark" href="/signup?return_url=%2Fbiz%2FrYqmaOIULRouz_1db07OdQ" class="ybtn ybtn-small bookmark-button js-bookmark-button not-bookmarked"><span  class="i-wrap ig-wrap-biz_details i-bookmark-biz_details-wrap"><i  class="i ig-biz_details i-bookmark-biz_details"></i>     Bookmark
     <span class="offscreen">, Opens a popup</span>
 </span></a>
         </span>
@@ -555,7 +557,7 @@
             data-business-id="rYqmaOIULRouz_1db07OdQ"
             data-location-dropper-uri="/locations"
             data-googlead-slot-sizes="[[728, 90]]"
-            data-googlead-attrs="[[&#34;attrtakeou&#34;, &#34;yes&#34;], [&#34;attrambian&#34;, [&#34;casual&#34;]], [&#34;attrgrupok&#34;, &#34;yes&#34;], [&#34;attroutdor&#34;, &#34;yes&#34;], [&#34;attrwaiter&#34;, &#34;yes&#34;], [&#34;attrdelivr&#34;, &#34;no&#34;], [&#34;category&#34;, [&#34;restaurant&#34;]], [&#34;city&#34;, &#34;Philadelph&#34;], [&#34;attrdogsok&#34;, &#34;no&#34;], [&#34;attralcoho&#34;, &#34;no&#34;], [&#34;attraccess&#34;, &#34;yes&#34;], [&#34;section&#34;, &#34;map&#34;], [&#34;zipcode&#34;, &#34;19147&#34;], [&#34;dma_code&#34;, &#34;504&#34;], [&#34;signed_in&#34;, &#34;no&#34;], [&#34;attrrating&#34;, &#34;4.0&#34;], [&#34;attrreserv&#34;, &#34;no&#34;], [&#34;attrnoise&#34;, &#34;average&#34;], [&#34;scategory2&#34;, [&#34;breakfast_&#34;, &#34;newamerica&#34;]], [&#34;language&#34;, &#34;en&#34;], [&#34;attrparkin&#34;, [&#34;street&#34;]], [&#34;attrcredit&#34;, &#34;no&#34;], [&#34;attrcater&#34;, &#34;yes&#34;], [&#34;attrprice&#34;, &#34;2&#34;], [&#34;attrsmeals&#34;, [&#34;brunch&#34;]], [&#34;bizid&#34;, &#34;rYqmaOIULRouz_1db07OdQ&#34;], [&#34;attrkidsok&#34;, &#34;yes&#34;], [&#34;country&#34;, &#34;us&#34;], [&#34;sk&#34;, &#34;no&#34;], [&#34;remove_ads&#34;, &#34;no&#34;], [&#34;attrattire&#34;, &#34;casual&#34;], [&#34;mode&#34;, &#34;live&#34;], [&#34;attrhastv&#34;, &#34;yes&#34;], [&#34;attrwifi&#34;, &#34;free&#34;]]"
+            data-googlead-attrs="[[&#34;attrtakeou&#34;, &#34;yes&#34;], [&#34;attrambian&#34;, [&#34;casual&#34;]], [&#34;attrgrupok&#34;, &#34;yes&#34;], [&#34;attroutdor&#34;, &#34;yes&#34;], [&#34;attrwaiter&#34;, &#34;yes&#34;], [&#34;attrdelivr&#34;, &#34;no&#34;], [&#34;category&#34;, [&#34;restaurant&#34;]], [&#34;city&#34;, &#34;Philadelph&#34;], [&#34;attrcredit&#34;, &#34;no&#34;], [&#34;attralcoho&#34;, &#34;no&#34;], [&#34;attraccess&#34;, &#34;yes&#34;], [&#34;section&#34;, &#34;map&#34;], [&#34;zipcode&#34;, &#34;19147&#34;], [&#34;dma_code&#34;, &#34;504&#34;], [&#34;signed_in&#34;, &#34;no&#34;], [&#34;attrrating&#34;, &#34;4.0&#34;], [&#34;attrreserv&#34;, &#34;no&#34;], [&#34;attrnoise&#34;, &#34;average&#34;], [&#34;scategory2&#34;, [&#34;breakfast_&#34;, &#34;newamerica&#34;]], [&#34;language&#34;, &#34;en&#34;], [&#34;attrparkin&#34;, [&#34;street&#34;]], [&#34;attrdogsok&#34;, &#34;no&#34;], [&#34;attrcater&#34;, &#34;yes&#34;], [&#34;attrprice&#34;, &#34;2&#34;], [&#34;attrsmeals&#34;, [&#34;brunch&#34;]], [&#34;bizid&#34;, &#34;rYqmaOIULRouz_1db07OdQ&#34;], [&#34;attrkidsok&#34;, &#34;yes&#34;], [&#34;country&#34;, &#34;us&#34;], [&#34;sk&#34;, &#34;no&#34;], [&#34;remove_ads&#34;, &#34;no&#34;], [&#34;attrattire&#34;, &#34;casual&#34;], [&#34;mode&#34;, &#34;live&#34;], [&#34;attrhastv&#34;, &#34;yes&#34;], [&#34;attrwifi&#34;, &#34;free&#34;]]"
         >
                     
         <div class="googlead-leader-wrapper" id="yelp_us_map_modal_728x90-wrapper">
@@ -657,12 +659,7 @@
 
         </div>
     </div>
-    <script type="text/javascript">
-            
-                window.yPerfTimings.push(["biz_map:rendered", (new Date()).getTime()]);
-
-</script>
-
+    
 
             <div class="mapbox-text">
         <a href="/biz_attribute?biz_id=rYqmaOIULRouz_1db07OdQ" class="i-wrap ig-wrap-common i-action-edit-common-wrap link-more mapbox-edit"><i  class="i ig-common i-action-edit-common"></i> Edit</a>
@@ -706,18 +703,13 @@
                 <li>
                     <span  class="i-wrap ig-wrap-common i-external-link-grey-common-wrap mapbox-icon"><i  class="i ig-common i-external-link-grey-common"></i>     <div class="biz-website">
         <span class="offscreen">Business website</span>
-        <a href="/biz_redir?url=http%3A%2F%2Fwww.greeneggscafe.com&amp;src_bizid=rYqmaOIULRouz_1db07OdQ&amp;cachebuster=1413667851&amp;s=3161eea7d2a375dd519887cad9682aedc59e47a16b536f15ab9da7132ab0d977" target="_blank">greeneggscafe.com</a>
+        <a href="/biz_redir?url=http%3A%2F%2Fwww.greeneggscafe.com&amp;src_bizid=rYqmaOIULRouz_1db07OdQ&amp;cachebuster=1413863724&amp;s=33ba19cc23c25931e56d27243b42a0ebfbb8dd24a9f3bea06866ae7d6f5d1225" target="_blank">greeneggscafe.com</a>
     </div>
 </span>
                 </li>
         </ul>
     </div>
-    <script type="text/javascript">
-            
-                window.yPerfTimings.push(["biz_address:rendered", (new Date()).getTime()]);
-
-</script>
-
+    
 
     </div>
 
@@ -774,9 +766,9 @@
     <div class="js-photo photo photo-1" data-ga-label="left_photo">
         <div class="showcase-photo-box">
            
-        <a href="/biz_photos/green-eggs-caf%C3%A9-philadelphia-4?select=Rn0gKtTfQlWyQISAgMPU1g">
+        <a href="/biz_photos/green-eggs-caf%C3%A9-philadelphia-4?select=aJX08LreOhPn9YBVKqLeow">
             
-        <img alt="Chicken and waffle Benedict" class="photo-box-img" height="250" src="http://s3-media4.fl.yelpcdn.com/bphoto/Rn0gKtTfQlWyQISAgMPU1g/ls.jpg" width="250">
+        <img alt="Mascarpone and chocolate chips inside.…" class="photo-box-img" height="250" src="http://s3-media4.fl.yelpcdn.com/bphoto/aJX08LreOhPn9YBVKqLeow/ls.jpg" width="250">
 
         </a>
 
@@ -789,11 +781,11 @@
                 
 
 
-    <div class="photo-box pb-30s" data-hovercard-id="ICX6lkUR4OJI-s8tuvMDsw">
-                <a href="/user_details?userid=6uWqvOhqEi_cBtlqsyvjJA">
+    <div class="photo-box pb-30s" data-hovercard-id="fZvrqsbk8p5Rctj37Blcmw">
+                <a href="/user_details?userid=iWdmOyWAToTbmkm1ViAltg">
             
 
-    <img alt="Kim N." class="photo-box-img" height="30" src="//s3-media2.fl.yelpcdn.com/assets/2/www/img/0288f46ccbae/default_avatars/user_30_square.png" width="30">
+    <img alt="Alex T." class="photo-box-img" height="30" src="//s3-media4.fl.yelpcdn.com/photo/nlyNQtYprK8piYuKTPZNdg/30s.jpg" width="30">
 
         </a>
 
@@ -804,11 +796,11 @@
     </div>
 
                         <div class="media-story">
-            <a class="photo-desc" href="/biz_photos/green-eggs-caf%C3%A9-philadelphia-4?select=Rn0gKtTfQlWyQISAgMPU1g">
-                Chicken and waffle Benedict
+            <a class="photo-desc" href="/biz_photos/green-eggs-caf%C3%A9-philadelphia-4?select=aJX08LreOhPn9YBVKqLeow">
+                Mascarpone and chocolate chips inside.…
             </a>
         <span class="author">
-                by         <a class="user-display-name" href="/user_details?userid=6uWqvOhqEi_cBtlqsyvjJA" data-hovercard-id="ICX6lkUR4OJI-s8tuvMDsw">Kim N.</a>
+                by         <a class="user-display-name" href="/user_details?userid=iWdmOyWAToTbmkm1ViAltg" data-hovercard-id="fZvrqsbk8p5Rctj37Blcmw">Alex T.</a>
         </span>
     </div>
 
@@ -880,9 +872,9 @@
     <div class="js-photo photo photo-3 photo-grid" data-ga-label="right_photo">
         <div class="showcase-photo-box">
            
-        <a href="/biz_photos/green-eggs-caf%C3%A9-philadelphia-4?select=aJX08LreOhPn9YBVKqLeow">
+        <a href="/biz_photos/green-eggs-caf%C3%A9-philadelphia-4?select=pOWYjzCRdYCGP85f3muHUA">
             
-        <img alt="Mascarpone and chocolate chips inside.…" class="photo-box-img" height="250" src="http://s3-media4.fl.yelpcdn.com/bphoto/aJX08LreOhPn9YBVKqLeow/ls.jpg" width="250">
+        <img alt="Creme brule french toast" class="photo-box-img" height="250" src="http://s3-media1.fl.yelpcdn.com/bphoto/pOWYjzCRdYCGP85f3muHUA/ls.jpg" width="250">
 
         </a>
 
@@ -901,9 +893,9 @@
         </a>
 
                     
-        <a href="/biz_photos/green-eggs-caf%C3%A9-philadelphia-4?select=pOWYjzCRdYCGP85f3muHUA">
+        <a href="/biz_photos/green-eggs-caf%C3%A9-philadelphia-4?select=rb1TZVJVX9LXngLHKgMj9Q">
             
-        <img alt="Creme brule french toast" class="photo-box-img" height="180" src="http://s3-media2.fl.yelpcdn.com/bphoto/pOWYjzCRdYCGP85f3muHUA/180s.jpg" width="180">
+        <img alt="The kitchen sink" class="photo-box-img" height="180" src="http://s3-media3.fl.yelpcdn.com/bphoto/rb1TZVJVX9LXngLHKgMj9Q/180s.jpg" width="180">
 
         </a>
 
@@ -918,7 +910,7 @@
     </div>
 
 
-        <meta itemprop="image" content="http://s3-media4.fl.yelpcdn.com/bphoto/Rn0gKtTfQlWyQISAgMPU1g/ls.jpg">
+        <meta itemprop="image" content="http://s3-media4.fl.yelpcdn.com/bphoto/aJX08LreOhPn9YBVKqLeow/ls.jpg">
 
         </div>
 
@@ -944,11 +936,11 @@
                
 
 
-    <div class="photo-box pb-60s" data-hovercard-id="TcLflf1YlUFgFaF9Gcrh2A">
-                <a href="/user_details?userid=53wBcTYZc5alJNzockQohw">
+    <div class="photo-box pb-60s">
+                <a href="/biz_photos/green-eggs-caf%C3%A9-philadelphia-4?select=H2uUHbWCf3KMAId0b5lLEw">
             
 
-    <img alt="Sandy K." class="photo-box-img" height="60" src="//s3-media2.fl.yelpcdn.com/photo/V-G93Fp-SZG5obG55fYSSw/60s.jpg" width="60">
+    <img alt="" class="photo-box-img" height="60" src="//s3-media4.fl.yelpcdn.com/bphoto/H2uUHbWCf3KMAId0b5lLEw/60s.jpg" width="60">
 
         </a>
 
@@ -976,11 +968,11 @@
                
 
 
-    <div class="photo-box pb-60s" data-hovercard-id="f92itntck7LBBq9SbJDygw">
-                <a href="/user_details?userid=ETyu4_RFoZNYGYFXk0KuFg">
+    <div class="photo-box pb-60s">
+                <a href="/biz_photos/green-eggs-caf%C3%A9-philadelphia-4?select=djzdIXh1ESv8mkTy8RjhMQ">
             
 
-    <img alt="Philly C." class="photo-box-img" height="60" src="//s3-media4.fl.yelpcdn.com/photo/OUgQq2eI5cuxbyyD5W-O9w/60s.jpg" width="60">
+    <img alt="" class="photo-box-img" height="60" src="//s3-media1.fl.yelpcdn.com/bphoto/djzdIXh1ESv8mkTy8RjhMQ/60s.jpg" width="60">
 
         </a>
 
@@ -990,7 +982,7 @@
         </div>
         <div class="media-story">
             <p class="quote">
-                    “The <a class="ngram" href="http://www.yelp.com/biz/green-eggs-caf%C3%A9-philadelphia-4?hrid=kunqf8k4UuCLeb5IlUu0fw&rh_ident=red_velvet_pancake&rh_type=phrase">red velvet pancakes</a> are also pretty popular, but nothing comes close to those creme brulee french toast.” <a class="quote-source" href="http://www.yelp.com/biz/green-eggs-caf%C3%A9-philadelphia-4?hrid=kunqf8k4UuCLeb5IlUu0fw&amp;rh_ident=red_velvet_pancake&amp;rh_type=phrase">in 36 reviews</a>
+                    “The <a class="ngram" href="http://www.yelp.com/biz/green-eggs-caf%C3%A9-philadelphia-4?hrid=kunqf8k4UuCLeb5IlUu0fw&rh_ident=red_velvet_pancake&rh_type=phrase">red velvet pancakes</a> are also pretty popular, but nothing comes close to those creme brulee french toast.” <a class="quote-source" href="http://www.yelp.com/biz/green-eggs-caf%C3%A9-philadelphia-4?hrid=kunqf8k4UuCLeb5IlUu0fw&amp;rh_ident=red_velvet_pancake&amp;rh_type=phrase">in 37 reviews</a>
             </p>
             
         </div>
@@ -1002,11 +994,11 @@
                
 
 
-    <div class="photo-box pb-60s" data-hovercard-id="UgNy_tkjkeyBVg1IbE48sg">
-                <a href="/user_details?userid=BhA4WuubImdWSWVUhWDcxQ">
+    <div class="photo-box pb-60s">
+                <a href="/biz_photos/green-eggs-caf%C3%A9-philadelphia-4?select=ZRBK-2pGfAJ_aBJjLIq3uQ">
             
 
-    <img alt="Sara X." class="photo-box-img" height="60" src="//s3-media1.fl.yelpcdn.com/photo/TwAGO_VQXEDZGbgvFmsCNg/60s.jpg" width="60">
+    <img alt="" class="photo-box-img" height="60" src="//s3-media3.fl.yelpcdn.com/bphoto/ZRBK-2pGfAJ_aBJjLIq3uQ/60s.jpg" width="60">
 
         </a>
 
@@ -1035,12 +1027,7 @@
 
         </div>
     </div>
-    <script type="text/javascript">
-            
-                window.yPerfTimings.push(["biz_review_highlights:rendered", (new Date()).getTime()]);
-
-</script>
-
+    
 
 
                         <div class="biz-ad-block adsense-iframe-wrap">
@@ -1107,7 +1094,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
             <ul class="tabs-pill feed-language-filters pull-right">
                 
         <li class="tab inline-block js-language-link selected">
-            <a href="http://www.yelp.com/biz/green-eggs-caf%C3%A9-philadelphia-4" data-lang="en">English<span class="offscreen">Selected</span></a><span class="count">396</span>
+            <a href="http://www.yelp.com/biz/green-eggs-caf%C3%A9-philadelphia-4" data-lang="en">English<span class="offscreen">Selected</span></a><span class="count">397</span>
         </li>
 
                 
@@ -1134,12 +1121,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
 
     </div>
 
-        <script type="text/javascript">
-            
-                window.yPerfTimings.push(["biz_first_review:rendered", (new Date()).getTime()]);
-
-</script>
-
+        
         <div class="review-list">
                 <ul class="ylist ylist-bordered reviews">
                     <li>
@@ -1297,7 +1279,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -1479,7 +1461,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -1702,7 +1684,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -1884,7 +1866,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -2066,7 +2048,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -2248,7 +2230,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -2430,7 +2412,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -2612,7 +2594,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -2794,7 +2776,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -2976,7 +2958,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -3050,7 +3032,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
                 <a href="/elite">Elite ’14</a>
             </li>
         <li class="friend-count">
-            <span  class="i-wrap ig-wrap-common i-friends-orange-common-wrap"><i  class="i ig-common i-friends-orange-common"></i> <b>4012</b> friends</span>
+            <span  class="i-wrap ig-wrap-common i-friends-orange-common-wrap"><i  class="i ig-common i-friends-orange-common"></i> <b>4017</b> friends</span>
         </li>
         <li class="review-count">
             <span  class="i-wrap ig-wrap-common i-star-orange-common-wrap"><i  class="i ig-common i-star-orange-common"></i> <b>1142</b> reviews</span>
@@ -3168,7 +3150,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -3362,7 +3344,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -3419,7 +3401,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -3606,7 +3588,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -3812,7 +3794,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -3994,7 +3976,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -4176,7 +4158,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -4358,7 +4340,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -4546,7 +4528,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -4603,7 +4585,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -4790,7 +4772,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -4972,7 +4954,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -5230,7 +5212,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -5415,7 +5397,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -5472,7 +5454,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -5659,7 +5641,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -5841,7 +5823,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -6026,7 +6008,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -6083,7 +6065,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -6270,7 +6252,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -6452,7 +6434,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -6634,7 +6616,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -6816,7 +6798,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -6998,7 +6980,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -7180,7 +7162,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -7369,7 +7351,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -7551,7 +7533,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -7733,7 +7715,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -7915,7 +7897,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -8097,7 +8079,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -8279,7 +8261,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -8461,7 +8443,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -8643,7 +8625,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -8825,7 +8807,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="96f89e924df6a3c4b83e72ac18e29ab6a655288d13e018679e596ba9338a7a4e">
+                <ul class="big-ufc" data-csrf-token="119399787c9f254c0c61218d48779f8554ad7e980a4d073ba7c0416dd3383b17">
                         
 
 
@@ -8935,7 +8917,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
                     
                             <div class="not-recommended ysection">
             <a class="subtle-text inline-block js-expander-link" href="/not_recommended_reviews/green-eggs-caf%C3%A9-philadelphia-4" rel="nofollow">
-                    52 other reviews that are not currently recommended
+                    53 other reviews that are not currently recommended
             </a>
             <div class="not-recommended-reviews-drawer filtered-reviews-content js-expander-content hidden"></div>
         </div>
@@ -9036,6 +9018,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
                             <span class="nowrap">8:00 am</span> - <span class="nowrap">4:00 pm</span>
                         </td>
                         <td class="extra">
+                                <span class="nowrap closed">Closed now</span>
                         </td>
                     </tr>
                     <tr>
@@ -9076,7 +9059,6 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
                             <span class="nowrap">8:00 am</span> - <span class="nowrap">4:00 pm</span>
                         </td>
                         <td class="extra">
-                                <span class="nowrap closed">Closed now</span>
                         </td>
                     </tr>
                     <tr>
@@ -9126,7 +9108,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
 
             </div>
             <div class="media-story">
-                <b>Ann A.</b> This is most definitely my go to spot with clients.  The food is amazing (Red Velvet Pancakes with…
+                <b>Christina H.</b> My new favorite! I wish I could have ordered everything on the menu, but since that&#39;s not realistic,…
             </div>
         </div>
 
@@ -9142,10 +9124,10 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
 
                         <dl class="menu-item">
         <dt>
-                <span><b>Mixed Berries</b></span>
+                <span><b><a href="/menu/green-eggs-caf%C3%A9-philadelphia-4/item/juice">Juice</a></b></span>
         </dt>
             <dd>
-                4.50
+                Price varies
             </dd>
     </dl>
 
@@ -9376,12 +9358,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         </div>
 
 
-                    <script type="text/javascript">
-            
-                window.yPerfTimings.push(["biz_attributes:rendered", (new Date()).getTime()]);
-
-</script>
-
+                    
 
                             <div class="ywidget js-from-biz-owner">
             <h3>From the business</h3>
@@ -9462,7 +9439,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
 
 
                 <span class="review-count rating-qualifier">
-            377 reviews
+            378 reviews
     </span>
 
         </div>
@@ -9511,7 +9488,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
 
 
                 <span class="review-count rating-qualifier">
-            386 reviews
+            388 reviews
     </span>
 
         </div>
@@ -9586,10 +9563,10 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
 
 
     <div class="photo-box pb-60s">
-                <a href="/list/the-yelp-100-challenge-waltham-14">
+                <a href="/list/brunchadelphia-philadelphia">
             
 
-    <img alt="Mindy T." class="photo-box-img" height="60" src="//s3-media4.fl.yelpcdn.com/photo/ZMNaZErbYVtGx5vOIycrqA/60s.jpg" width="60">
+    <img alt="Barrett L." class="photo-box-img" height="60" src="//s3-media3.fl.yelpcdn.com/photo/ssn0z5u7HA89twLRUFnUpA/60s.jpg" width="60">
 
         </a>
 
@@ -9599,45 +9576,13 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         </div>
         <div class="media-story">
             <div class="media-title">
-                    <a href="/list/the-yelp-100-challenge-waltham-14">
-        The Yelp 100 Challenge
+                    <a href="/list/brunchadelphia-philadelphia">
+        Brunchadelphia
     </a>
 
             </div>
             <q>
-                Accepting the challenge to write 100+ reviews in 2013!
-            </q>
-        </div>
-    </div>
-
-                    </li>
-                    <li>
-                            <div class="media-block media-block-large clearfix">
-        <div class="media-avatar">
-                
-
-
-    <div class="photo-box pb-60s">
-                <a href="/list/the-city-of-brotherly-love-philadelphia-4">
-            
-
-    <img alt="Marthy S." class="photo-box-img" height="60" src="//s3-media3.fl.yelpcdn.com/photo/MMYHG5VxeYDzmJi8XQrdfw/60s.jpg" width="60">
-
-        </a>
-
-    </div>
-
-
-        </div>
-        <div class="media-story">
-            <div class="media-title">
-                    <a href="/list/the-city-of-brotherly-love-philadelphia-4">
-        The City of Brotherly Love
-    </a>
-
-            </div>
-            <q>
-                Where I&#39;ve been (so far) in Philadelphia...some misses but mostly hits
+                When brunching in the City of Brotherly Love, these neighborhood spots…
             </q>
         </div>
     </div>
@@ -9670,6 +9615,38 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
             </div>
             <q>
                 My Lady and I have affectionately named one of our favourite ways to…
+            </q>
+        </div>
+    </div>
+
+                    </li>
+                    <li>
+                            <div class="media-block media-block-large clearfix">
+        <div class="media-avatar">
+                
+
+
+    <div class="photo-box pb-60s">
+                <a href="/list/top-5-philly-brunch-philadelphia">
+            
+
+    <img alt="Mary S." class="photo-box-img" height="60" src="//s3-media2.fl.yelpcdn.com/photo/AguHGrqVTu2WrxeKgyMQBg/60s.jpg" width="60">
+
+        </a>
+
+    </div>
+
+
+        </div>
+        <div class="media-story">
+            <div class="media-title">
+                    <a href="/list/top-5-philly-brunch-philadelphia">
+        Top 5 Philly brunch
+    </a>
+
+            </div>
+            <q>
+                have you seen high fidelity, it&#39;s like that, but with Philadelphia…
             </q>
         </div>
     </div>
@@ -9770,7 +9747,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
 
 
             <!-- google_ad_section_start(weight=ignore) -->
-<!-- <a href="/biz/outlook-autumn-market-fundamental-catwalk-flimsy-roost-legibility-individualism-grocer-predestination-6">yelp</a> -->
+<!-- <a href="/biz/outlook-autumn-market-fundamental-catwalk-flimsy-roost-legibility-individualism-grocer-predestination-5">yelp</a> -->
 
     <div class="footer">
         <div class="footer-wrap">
@@ -10219,7 +10196,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
 
 <script type="text/javascript">
                 
-                yConfig = {"bingMapsUrl": "https://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0\u0026mkt=en-US\u0026s=1\u0026onscriptload=", "cookies": {"ADMIN_SEARCH_USERDATA_RADIUS": "udr", "RECENT_LOCATIONS": "recentlocations", "SEARCH_PREFS": "searchPrefs", "JS_TRACK": "js_track", "YUV": "yuv", "DEBUG": "debug", "SELECTED_ACTIVITY_FEED": "fd", "SIGNUP_TRACK": "strack", "EXPR_OVERRIDE": "expr", "COOKIE_INFO": "cim", "LOCATION": "location", "ADMIN_CM_SCOREBOARD_SETTINGS": "acms", "SEARCH_SUGGEST_INFO": "search_suggest", "ADMIN_BUSINESS_ATTRIBUTE_CHANGESET_UTILS_PREFS": "bap", "ADMIN_SEARCH_USERDATA_LOCATION": "udl", "ADMIN_SEARCH_USERDATA": "ud", "DISMISSIBLE_MESSAGE_COOKIE": "dm", "USED_LOCALE_SELECTOR": "used_locale_selector", "PRIVACY_POLICY_NOTICE": "ppn", "HIDE_BROWSER_BAR": "hidebrowserbar", "SUGGEST_COOKIE": "ssi", "MESSAGE_SENDER_PASSED_CAPTCHA": "mspc", "QUANTCAST": "qntcst"}, "googDebugLevel": "OFF", "cdn": {"hostnamePattern": {"s3": "s3-media%s.fl.yelpcdn.com", "yelp": "media%s.fl.yelpcdn.com"}, "shardCount": 4}, "enabledSitRepChannels": {"quick_reservation": true, "biz_map_view": true, "frontend_performance": true, "biz_directions": true, "call_to_action": true}, "spinnerURLSmall": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/294d5d03032e/loaders/small-throbber.gif", "uniqueRequestId": "3f4113698c314f41", "googleMapsUrl": "//maps.googleapis.com/maps/api/js?client=gme-yelp\u0026language=en\u0026sensor=false", "yelpcodeTemplateVersion": "dd3d29c265", "isLoggedIn": false, "imageUrls": {"mapMarkers": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/61a4c5ed6fcc/map/map_markers_sprite.png", "stars": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/c2252a4cd43e/ico/stars/v2/stars_map.png"}, "mapMarkerSerial": "20140220", "countryNameList": ["argentina", "australia", "austria", "belgium", "brazil", "canada", "chile", "czech republic", "denmark", "finland", "france", "germany", "hong kong", "ireland", "italy", "japan", "mexico", "new zealand", "norway", "poland", "portugal", "singapore", "spain", "sweden", "switzerland", "netherlands", "turkey", "uk", "usa"], "isSitRepEnabled": true, "comscore": {"c15": "", "c3": "", "c2": 7130511, "c1": 2, "c6": "", "c5": "", "c4": ""}, "enableHighVolumeGAEvents": false, "isClientErrorsEnabled": false, "spinnerURLLarge": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/049247849df0/loaders/throbber.gif", "vendorExternalURLs": {}, "cookieDomain": ".www.yelp.com", "recaptchaPublicKey": "6Lc2978SAAAAADHkLB3mdFpNLLfBP5CYnqlR0gz6", "isLive": true, "bingMapsKey": "AjhDhG82AEA_I4CdC-0o2DTDxg1Ojh0AZdcp_o-IbNuJGlb5fMMrig728eetoW8S"};
+                yConfig = {"bingMapsUrl": "https://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0\u0026mkt=en-US\u0026s=1\u0026onscriptload=", "cookies": {"ADMIN_SEARCH_USERDATA_RADIUS": "udr", "RECENT_LOCATIONS": "recentlocations", "SEARCH_PREFS": "searchPrefs", "JS_TRACK": "js_track", "YUV": "yuv", "DEBUG": "debug", "SELECTED_ACTIVITY_FEED": "fd", "SIGNUP_TRACK": "strack", "EXPR_OVERRIDE": "expr", "COOKIE_INFO": "cim", "LOCATION": "location", "ADMIN_CM_SCOREBOARD_SETTINGS": "acms", "SEARCH_SUGGEST_INFO": "search_suggest", "ADMIN_BUSINESS_ATTRIBUTE_CHANGESET_UTILS_PREFS": "bap", "ADMIN_SEARCH_USERDATA_LOCATION": "udl", "ADMIN_SEARCH_USERDATA": "ud", "DISMISSIBLE_MESSAGE_COOKIE": "dm", "USED_LOCALE_SELECTOR": "used_locale_selector", "PRIVACY_POLICY_NOTICE": "ppn", "HIDE_BROWSER_BAR": "hidebrowserbar", "SUGGEST_COOKIE": "ssi", "MESSAGE_SENDER_PASSED_CAPTCHA": "mspc", "QUANTCAST": "qntcst"}, "googDebugLevel": "OFF", "cdn": {"hostnamePattern": {"s3": "s3-media%s.fl.yelpcdn.com", "yelp": "media%s.fl.yelpcdn.com"}, "shardCount": 4}, "enabledSitRepChannels": {"quick_reservation": true, "biz_map_view": true, "biz_directions": true, "call_to_action": true}, "spinnerURLSmall": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/294d5d03032e/loaders/small-throbber.gif", "uniqueRequestId": "d955a6a666e08e7f", "googleMapsUrl": "//maps.googleapis.com/maps/api/js?client=gme-yelp\u0026language=en\u0026sensor=false", "yelpcodeTemplateVersion": "f4dbd8669e", "isLoggedIn": false, "imageUrls": {"mapMarkers": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/61a4c5ed6fcc/map/map_markers_sprite.png", "stars": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/c2252a4cd43e/ico/stars/v2/stars_map.png"}, "mapMarkerSerial": "20140220", "countryNameList": ["argentina", "australia", "austria", "belgium", "brazil", "canada", "chile", "czech republic", "denmark", "finland", "france", "germany", "hong kong", "ireland", "italy", "japan", "mexico", "new zealand", "norway", "poland", "portugal", "singapore", "spain", "sweden", "switzerland", "netherlands", "turkey", "uk", "usa"], "isSitRepEnabled": true, "comscore": {"c15": "", "c3": "", "c2": 7130511, "c1": 2, "c6": "", "c5": "", "c4": ""}, "enableHighVolumeGAEvents": false, "isClientErrorsEnabled": true, "spinnerURLLarge": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/049247849df0/loaders/throbber.gif", "vendorExternalURLs": {}, "cookieDomain": ".www.yelp.com", "recaptchaPublicKey": "6Lc2978SAAAAADHkLB3mdFpNLLfBP5CYnqlR0gz6", "isLive": true, "bingMapsKey": "AjhDhG82AEA_I4CdC-0o2DTDxg1Ojh0AZdcp_o-IbNuJGlb5fMMrig728eetoW8S"};
 
 </script>
             
@@ -10248,22 +10225,16 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
 
                 
 
-            <script src="http://s3-media4.fl.yelpcdn.com/assets/2/www/js/d56bd43138e5/assets/vendor_external/LAB.min.js"></script><script>$LAB.wait(function() {
-            window.yPerfTimings.push(["ASYNC_JS:load_jquery:start", (new Date()).getTime()]);
-            })
-.script("//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
-.wait(function() {if(document.readyState === 'interactive') jQuery.ready();
-            window.yPerfTimings.push(["ASYNC_JS:load_jquery:end", (new Date()).getTime()]);
-            window.yPerfTimings.push(["ASYNC_JS:load_modules:start", (new Date()).getTime()]);
-            })
-.script("//s3-media4.fl.yelpcdn.com/assets/2/www/js/400f5736c4bb/assets/module_core-en_US.min.js")
+            <script src="http://s3-media4.fl.yelpcdn.com/assets/2/www/js/d56bd43138e5/assets/vendor_external/LAB.min.js"></script><script>$LAB.script("//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
+.wait(function() {if(document.readyState === 'interactive') jQuery.ready();})
+.script("//s3-media4.fl.yelpcdn.com/assets/2/www/js/e2c55ca71386/assets/module_core-en_US.min.js")
 .wait(function() {
                 yConfig.vendorExternalURLs["easyXDM"]=['//s3-media4.fl.yelpcdn.com/assets/2/www/js/62199ef9e869/assets/vendor_external/easyXDM.min.js']
                 
                 yConfig.vendorExternalURLs["plugin-detect"]=['//s3-media4.fl.yelpcdn.com/assets/2/www/js/bfd62b330c7a/assets/vendor_external/plugin-detect-0.6.3.min.js']
                 yelp.www.init.initSearchSuggest("#find_desc", ".find-decorator", "#dropperText_Mast", false, false);
 yelp.www.init.initLocationSuggest("#dropperText_Mast", ".near-decorator", true, false);
-yelp.www.init.initGAUniversal({"domain": "yelp.com", "dimensions": {"1": "anon", "7": "True", "8": "False", "9": "100+", "10": "100+", "11": "breakfast_brunch, newamerican", "12": "1627", "14": "False", "15": "US"}, "enable_high_volume_events": false, "trackers": {"www": "UA-30501-55"}, "js_dimensions": [16], "clientID": "33389F18FCAA2C44"}, [], null);
+yelp.www.init.initGAUniversal({"domain": "yelp.com", "dimensions": {"1": "anon", "7": "True", "8": "False", "9": "100+", "10": "100+", "11": "breakfast_brunch, newamerican", "12": "1630", "14": "", "15": "US"}, "enable_high_volume_events": false, "trackers": {"www": "UA-30501-55"}, "js_dimensions": [16], "clientID": "61A3B9E7E332966A"}, [], null);
 yelp.www.init.initNavItemTracking();
 yelp.www.init.initTimeOnPageAnalytics();
 yelp.init.initLocaleSelector("#language-selector-wrap");
@@ -10273,10 +10244,10 @@ yelp.pages.init();
 yelp.www.init.facebook(97534753161, "//connect.facebook.net/en_US/all.js");
 yelp.www.init.quantcast();
 })
-.script("//s3-media1.fl.yelpcdn.com/assets/2/www/js/60a72aa69c8e/assets/module_biz_details-en_US.min.js")
-.wait(function() {yelp.www.init.biz_details.initBookmark(false, "/bookmark/remove_biz_confirm", "c7f5ae3268deab0e199b62c971cd415da658d5bf8dc7bdcdf0c428584fb8582f", "6c184c9c86727488aff2a0a2a9a4f3ec339e2ac9e7ee4c6fb48bae33c086ff98");
-yelp.www.init.biz_details.sendToFriend("cc996590500baf84df184d7043693d25c2fe3b60c609029c914554a5a2a9e6e5");
-yelp.www.init.biz_details.reservations("7198bc39535171845cbfbb3c6faa463fbc05f5139f76137fd48f1daf55fdca4a");
+.script("//s3-media1.fl.yelpcdn.com/assets/2/www/js/299bef62dd02/assets/module_biz_details-en_US.min.js")
+.wait(function() {yelp.www.init.biz_details.initBookmark(false, "/bookmark/remove_biz_confirm", "34676499b00cbb4b3df80a1b1e0f3b07bc1c4f703e2c4851243ca7316d165430", "78229423dae329156a1b268cdbececc43dd4c2965fafcf250cddacbfb5e21a3d");
+yelp.www.init.biz_details.sendToFriend("0ecf708fdd2aee9811b176f536767d037d2c5739b27e20329d3e42eef775fdc9");
+yelp.www.init.biz_details.reservations("0c89d89a0f4ef89b25edc4d0b80cca1efdb45616072e6c75aefdeb2bb8388fa9");
 yelp.www.init.biz_details.initEditCategory(true);
 yelp.www.init.biz_details.initPlatform();
 yelp.www.init.biz_details.initMapLightbox();
@@ -10290,11 +10261,7 @@ yelp.www.init.biz_details.initBizPhotoMetrics();
 yelp.www.init.biz_details.mapSitRepLogger("rYqmaOIULRouz_1db07OdQ");
 yelp.www.init.biz_details.initMessageTheBusiness("/message_the_business/rYqmaOIULRouz_1db07OdQ/popup_form");
 yelp.www.init.biz_details.initNotRecommendedDrawer("/not_recommended_reviews/preview?biz_id=rYqmaOIULRouz_1db07OdQ");
-
-            var end = new Date().getTime();
-            window.yPerfTimings.push(["ASYNC_JS:load_modules:end", end]);
-            window.yPerfTimings.push(["JS_TIMING:modules_executed:end", end]);
-            })
+})
 $LAB.script("//sb.scorecardresearch.com/beacon.js")
 .wait(function() {
                 if (window.COMSCORE && window.COMSCORE['beacon']) {
@@ -10323,7 +10290,7 @@ $LAB.script("//sb.scorecardresearch.com/beacon.js")
                 if (main === null) {
                     throw 'invalid inline script, missing main declaration.';
                 }
-                main("3f4113698c314f41");
+                main("d955a6a666e08e7f");
             })();
     </script>
 
@@ -10349,14 +10316,9 @@ $LAB.script("//sb.scorecardresearch.com/beacon.js")
 
 <script type="text/javascript">
             
-                yConfig.csrf = {"UserFollow": "72cc20896eb2ad540b5f78d7057258b74c2235485d69e0dc25a4b6dbc86e820b", "SitRep": "576cb1ec611aedc154401456015fcb911c0654d3e597d0bb3c4030bee3dab157"};
+                yConfig.csrf = {"UserFollow": "80d4e156b2e9d75e68bddbd59556ab4c0276a2ac7800850f4711db3efaf16a68", "SitRep": "b6c78530284c72a8dacb8b690dcc4007656ce77a4e233c3422383f3400a63037"};
 
 </script>
 
-<script type="text/javascript">
-                
-                    window.yPerfTimings.push(["body:end", (new Date()).getTime()]);
-
-</script>
     </body>
 </html>

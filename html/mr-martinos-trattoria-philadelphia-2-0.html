@@ -20,7 +20,7 @@
 
                 yPerfTimings = [];
 
-                    ySitRepParams = {"clientIP": "68.32.36.226", "datacenter": "iad1", "action": "default", "uniqueRequestID": "cf6a154b568873d8", "isLoggedIn": false, "yuv_record": "bge48dY3ncsRDUMsZIs5eDw83MfKX5X8_t0R37ntWZKtK18qNHhUHYmBedfJQFh7uNiQ6eq64nJvrqj2wbhFyhCwNwSGkPfB", "servlet": "biz_details", "site": "main", "serverStartTime": 1413668952481};
+                    ySitRepParams = {"clientIP": "68.32.36.226", "datacenter": "iad1", "action": "default", "uniqueRequestID": "74d86774d14480ee", "isLoggedIn": false, "yuv_record": "XHQ_tBgYXTLRt1OlrQsqWrsW5DSuIInab0Pi5if7W6zSwzGenFBdnYDJbR14Zpe9lAHFvcslU_iwjwJbnK-4RuvO9qqJemWA", "servlet": "biz_details", "site": "main", "serverStartTime": 1413863819331};
                     window.ySitRepParams['initialVisibilityState'] = initialVisibilityState;
 
 
@@ -32,7 +32,7 @@
         ['_setDomainName', "yelp.com"],
         ['_setCustomVar', 1, "User Status", "anonymous", 3],
 
-        ['._setCustomVar', 2, 'from_qype', 'false', 1],
+        ['._setCustomVar', 2, 'integration', '""', 1],
 
         ['_setCustomVar', 4, "account level", "anon", 1],
 
@@ -46,7 +46,7 @@
         ['www._setDomainName', "yelp.com"],
         ['www._setCustomVar', 1, "User Status", "anonymous", 3],
 
-        ['www._setCustomVar', 2, 'from_qype', 'false', 1],
+        ['www._setCustomVar', 2, 'integration', '""', 1],
 
         ['www._setCustomVar', 4, "account level", "anon", 1],
 
@@ -63,7 +63,7 @@
 
             ['domainTracker._setCustomVar', 1, "User Status", "anonymous", 3],
 
-            ['domainTracker._setCustomVar', 2, 'from_qype', 'false', 1],
+            ['domainTracker._setCustomVar', 2, 'integration', '""', 1],
 
             ['domainTracker._setCustomVar', 5, 'content_country', "US", 3],
 
@@ -292,6 +292,9 @@
                 <input autocomplete="off" id="find_desc" maxlength="64" name="find_desc" placeholder="tacos, cheap dinner, Max’s" value="" aria-autocomplete="list" tabindex="1">
             </div>
         </div>
+            <div class="suggestions-list-container search-suggestions-list-container hidden">
+                <ul class="suggestions-list" role="listbox" aria-label="Search results"></ul>
+            </div>
     </div>
 
             <div class="search-field-container with-suggestions-list flex-container-inline near-decorator">
@@ -303,6 +306,9 @@
             </div>
 
         </div>
+            <div class="suggestions-list-container location-suggestions-list-container hidden">
+                <ul class="suggestions-list" role="listbox" aria-label="Search results"></ul>
+            </div>
     </div>
 
         <div class="button-container">
@@ -494,15 +500,25 @@
         </div>
         <div class="biz-page-header-right">
                 <div class="biz-page-actions nowrap">
-        <a href="/writeareview/biz/Zjg5nixJ-sTr9B6tsDzClw?return_url=%2Fbiz%2FZjg5nixJ-sTr9B6tsDzClw" class="ybtn ybtn-primary ytype war-button"><span  class="i-wrap ig-wrap-common i-war-star-common-wrap"><i  class="i ig-common i-war-star-common"></i> Write a Review</span></a>
-        <span class="ybtn-group clearfix">
-            <a href="/biz_user_photos/Zjg5nixJ-sTr9B6tsDzClw/upload" class="ybtn ybtn-small ytype"><span  class="i-wrap ig-wrap-biz_details i-add-photo-biz_details-wrap"><i  class="i ig-biz_details i-add-photo-biz_details"></i> Add Photo</span></a>
 
-            <a data-pop-uri="/send_to_friend/business/Zjg5nixJ-sTr9B6tsDzClw" data-ro-mode-action="share a business" href="/biz_share?bizid=Zjg5nixJ-sTr9B6tsDzClw&amp;return_url=%2Fbiz%2FZjg5nixJ-sTr9B6tsDzClw" class="ybtn ybtn-small ytype share-icon js-business-send-to-friend"><span  class="i-wrap ig-wrap-common i-share-common-wrap"><i  class="i ig-common i-share-common"></i>     Share
+
+        <a href="/writeareview/biz/Zjg5nixJ-sTr9B6tsDzClw?return_url=%2Fbiz%2FZjg5nixJ-sTr9B6tsDzClw" class="ybtn ybtn-primary war-button"><span  class="i-wrap ig-wrap-common i-war-star-common-wrap"><i  class="i ig-common i-war-star-common"></i> Write a Review</span></a>
+
+        <span class="ybtn-group clearfix">
+            <a href="/biz_user_photos/Zjg5nixJ-sTr9B6tsDzClw/upload" class="ybtn ybtn-small add-photo-button"><span  class="i-wrap ig-wrap-biz_details i-add-photo-biz_details-wrap"><i  class="i ig-biz_details i-add-photo-biz_details"></i> Add Photo</span></a>
+
+                        
+
+
+            <a data-pop-uri="/send_to_friend/business/Zjg5nixJ-sTr9B6tsDzClw" data-ro-mode-action="share a business" href="/biz_share?bizid=Zjg5nixJ-sTr9B6tsDzClw&amp;return_url=%2Fbiz%2FZjg5nixJ-sTr9B6tsDzClw" class="ybtn ybtn-small share-icon js-business-send-to-friend"><span  class="i-wrap ig-wrap-common i-share-common-wrap"><i  class="i ig-common i-share-common"></i>     Share
     <span class="offscreen">, Opens a popup</span>
 </span></a>
 
-                            <a data-ro-mode-action="add a bookmark" href="/signup?return_url=%2Fbiz%2FZjg5nixJ-sTr9B6tsDzClw" class="ybtn ybtn-small ytype js-bookmark-button not-bookmarked"><span  class="i-wrap ig-wrap-biz_details i-bookmark-biz_details-wrap"><i  class="i ig-biz_details i-bookmark-biz_details"></i>     Bookmark
+                        
+
+
+                
+            <a data-ro-mode-action="add a bookmark" href="/signup?return_url=%2Fbiz%2FZjg5nixJ-sTr9B6tsDzClw" class="ybtn ybtn-small bookmark-button js-bookmark-button not-bookmarked"><span  class="i-wrap ig-wrap-biz_details i-bookmark-biz_details-wrap"><i  class="i ig-biz_details i-bookmark-biz_details"></i>     Bookmark
     <span class="offscreen">, Opens a popup</span>
 </span></a>
         </span>
@@ -1215,7 +1231,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -1397,7 +1413,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -1579,7 +1595,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -1761,7 +1777,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -1943,7 +1959,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -2125,7 +2141,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -2196,7 +2212,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
 
                 <ul class="user-passport-stats">
         <li class="friend-count">
-            <span  class="i-wrap ig-wrap-common i-friends-orange-common-wrap"><i  class="i ig-common i-friends-orange-common"></i> <b>66</b> friends</span>
+            <span  class="i-wrap ig-wrap-common i-friends-orange-common-wrap"><i  class="i ig-common i-friends-orange-common"></i> <b>67</b> friends</span>
         </li>
         <li class="review-count">
             <span  class="i-wrap ig-wrap-common i-star-orange-common-wrap"><i  class="i ig-common i-star-orange-common"></i> <b>18</b> reviews</span>
@@ -2307,7 +2323,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -2489,7 +2505,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -2671,7 +2687,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -2853,7 +2869,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -3035,7 +3051,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -3217,7 +3233,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -3399,7 +3415,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -3473,7 +3489,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
             <span  class="i-wrap ig-wrap-common i-friends-orange-common-wrap"><i  class="i ig-common i-friends-orange-common"></i> <b>128</b> friends</span>
         </li>
         <li class="review-count">
-            <span  class="i-wrap ig-wrap-common i-star-orange-common-wrap"><i  class="i ig-common i-star-orange-common"></i> <b>60</b> reviews</span>
+            <span  class="i-wrap ig-wrap-common i-star-orange-common-wrap"><i  class="i ig-common i-star-orange-common"></i> <b>61</b> reviews</span>
         </li>
     </ul>
 
@@ -3581,7 +3597,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -3763,7 +3779,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -3945,7 +3961,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -4127,7 +4143,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -4312,7 +4328,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -4501,7 +4517,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -4683,7 +4699,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -4872,7 +4888,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -5083,7 +5099,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -5265,7 +5281,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -5451,7 +5467,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -5633,7 +5649,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -5815,7 +5831,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -5997,7 +6013,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -6179,7 +6195,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -6368,7 +6384,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -6562,7 +6578,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -6744,7 +6760,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -6926,7 +6942,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -7108,7 +7124,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -7290,7 +7306,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -7472,7 +7488,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -7654,7 +7670,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -7836,7 +7852,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -8025,7 +8041,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -8207,7 +8223,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -8389,7 +8405,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
         Was this review &hellip;?
     </p>
 
-                <ul class="big-ufc" data-csrf-token="d82c5eaaa6c8a1a73e459c292bf66dfc7e1c5db6686528aa459e52a75ce7908e">
+                <ul class="big-ufc" data-csrf-token="8b419cdb98254fd158699d87ff797f6bc5c84a1206c360909f092229cb7c955e">
                         
 
 
@@ -8480,20 +8496,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
                         <h3 class="offscreen">Business info summary</h3>
         <div class="island summary">
             <ul class="iconed-list">
-                        <li class="biz-hours iconed-list-item">
-            <div class="iconed-list-avatar">
-                    <i  class="i ig-biz_details i-clock-open-biz_details"></i>
-            </div>
-            <div class="iconed-list-story">
-                <span>
-                    Today
-                    <span class="hour-range"><span class="nowrap">5:30 pm</span> - <span class="nowrap">11:00 pm</span></span>
-                </span>
-
-                    <span class="nowrap extra open">Open now</span>
-            </div>
-        </li>
-
+                
                 
                 
                         <li class="iconed-list-item">
@@ -8595,7 +8598,6 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
                             <span class="nowrap">5:30 pm</span> - <span class="nowrap">11:00 pm</span>
                         </td>
                         <td class="extra">
-                                <span class="nowrap open">Open now</span>
                         </td>
                     </tr>
                     <tr>
@@ -8911,7 +8913,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
 
 
                 <span class="review-count rating-qualifier">
-            55 reviews
+            54 reviews
     </span>
 
         </div>
@@ -9170,7 +9172,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
 
 
             <!-- google_ad_section_start(weight=ignore) -->
-<!-- <a href="/biz/outlook-autumn-market-fundamental-catwalk-flimsy-roost-legibility-individualism-grocer-predestination-9">yelp</a> -->
+<!-- <a href="/biz/outlook-autumn-market-fundamental-catwalk-flimsy-roost-legibility-individualism-grocer-predestination-6">yelp</a> -->
 
     <div class="footer">
         <div class="footer-wrap">
@@ -9619,7 +9621,7 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
 
 <script type="text/javascript">
                 
-                yConfig = {"bingMapsUrl": "https://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0\u0026mkt=en-US\u0026s=1\u0026onscriptload=", "cookies": {"ADMIN_SEARCH_USERDATA_RADIUS": "udr", "RECENT_LOCATIONS": "recentlocations", "SEARCH_PREFS": "searchPrefs", "JS_TRACK": "js_track", "YUV": "yuv", "DEBUG": "debug", "SELECTED_ACTIVITY_FEED": "fd", "SIGNUP_TRACK": "strack", "EXPR_OVERRIDE": "expr", "COOKIE_INFO": "cim", "LOCATION": "location", "ADMIN_CM_SCOREBOARD_SETTINGS": "acms", "SEARCH_SUGGEST_INFO": "search_suggest", "ADMIN_BUSINESS_ATTRIBUTE_CHANGESET_UTILS_PREFS": "bap", "ADMIN_SEARCH_USERDATA_LOCATION": "udl", "ADMIN_SEARCH_USERDATA": "ud", "DISMISSIBLE_MESSAGE_COOKIE": "dm", "USED_LOCALE_SELECTOR": "used_locale_selector", "PRIVACY_POLICY_NOTICE": "ppn", "HIDE_BROWSER_BAR": "hidebrowserbar", "SUGGEST_COOKIE": "ssi", "MESSAGE_SENDER_PASSED_CAPTCHA": "mspc", "QUANTCAST": "qntcst"}, "googDebugLevel": "OFF", "cdn": {"hostnamePattern": {"s3": "s3-media%s.fl.yelpcdn.com", "yelp": "media%s.fl.yelpcdn.com"}, "shardCount": 4}, "enabledSitRepChannels": {"quick_reservation": true, "biz_map_view": true, "biz_directions": true, "call_to_action": true}, "spinnerURLSmall": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/294d5d03032e/loaders/small-throbber.gif", "uniqueRequestId": "cf6a154b568873d8", "googleMapsUrl": "//maps.googleapis.com/maps/api/js?client=gme-yelp\u0026language=en\u0026sensor=false", "yelpcodeTemplateVersion": "dd3d29c265", "isLoggedIn": false, "imageUrls": {"mapMarkers": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/61a4c5ed6fcc/map/map_markers_sprite.png", "stars": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/c2252a4cd43e/ico/stars/v2/stars_map.png"}, "mapMarkerSerial": "20140220", "countryNameList": ["argentina", "australia", "austria", "belgium", "brazil", "canada", "chile", "czech republic", "denmark", "finland", "france", "germany", "hong kong", "ireland", "italy", "japan", "mexico", "new zealand", "norway", "poland", "portugal", "singapore", "spain", "sweden", "switzerland", "netherlands", "turkey", "uk", "usa"], "isSitRepEnabled": true, "comscore": {"c15": "", "c3": "", "c2": 7130511, "c1": 2, "c6": "", "c5": "", "c4": ""}, "enableHighVolumeGAEvents": false, "isClientErrorsEnabled": false, "spinnerURLLarge": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/049247849df0/loaders/throbber.gif", "vendorExternalURLs": {}, "cookieDomain": ".www.yelp.com", "recaptchaPublicKey": "6Lc2978SAAAAADHkLB3mdFpNLLfBP5CYnqlR0gz6", "isLive": true, "bingMapsKey": "AjhDhG82AEA_I4CdC-0o2DTDxg1Ojh0AZdcp_o-IbNuJGlb5fMMrig728eetoW8S"};
+                yConfig = {"bingMapsUrl": "https://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0\u0026mkt=en-US\u0026s=1\u0026onscriptload=", "cookies": {"ADMIN_SEARCH_USERDATA_RADIUS": "udr", "RECENT_LOCATIONS": "recentlocations", "SEARCH_PREFS": "searchPrefs", "JS_TRACK": "js_track", "YUV": "yuv", "DEBUG": "debug", "SELECTED_ACTIVITY_FEED": "fd", "SIGNUP_TRACK": "strack", "EXPR_OVERRIDE": "expr", "COOKIE_INFO": "cim", "LOCATION": "location", "ADMIN_CM_SCOREBOARD_SETTINGS": "acms", "SEARCH_SUGGEST_INFO": "search_suggest", "ADMIN_BUSINESS_ATTRIBUTE_CHANGESET_UTILS_PREFS": "bap", "ADMIN_SEARCH_USERDATA_LOCATION": "udl", "ADMIN_SEARCH_USERDATA": "ud", "DISMISSIBLE_MESSAGE_COOKIE": "dm", "USED_LOCALE_SELECTOR": "used_locale_selector", "PRIVACY_POLICY_NOTICE": "ppn", "HIDE_BROWSER_BAR": "hidebrowserbar", "SUGGEST_COOKIE": "ssi", "MESSAGE_SENDER_PASSED_CAPTCHA": "mspc", "QUANTCAST": "qntcst"}, "googDebugLevel": "OFF", "cdn": {"hostnamePattern": {"s3": "s3-media%s.fl.yelpcdn.com", "yelp": "media%s.fl.yelpcdn.com"}, "shardCount": 4}, "enabledSitRepChannels": {"quick_reservation": true, "biz_map_view": true, "biz_directions": true, "call_to_action": true}, "spinnerURLSmall": "http://s3-media4.fl.yelpcdn.com/assets/2/www/img/294d5d03032e/loaders/small-throbber.gif", "uniqueRequestId": "74d86774d14480ee", "googleMapsUrl": "//maps.googleapis.com/maps/api/js?client=gme-yelp\u0026language=en\u0026sensor=false", "yelpcodeTemplateVersion": "f4dbd8669e", "isLoggedIn": false, "imageUrls": {"mapMarkers": "http://s3-media1.fl.yelpcdn.com/assets/2/www/img/61a4c5ed6fcc/map/map_markers_sprite.png", "stars": "http://s3-media3.fl.yelpcdn.com/assets/2/www/img/c2252a4cd43e/ico/stars/v2/stars_map.png"}, "mapMarkerSerial": "20140220", "countryNameList": ["argentina", "australia", "austria", "belgium", "brazil", "canada", "chile", "czech republic", "denmark", "finland", "france", "germany", "hong kong", "ireland", "italy", "japan", "mexico", "new zealand", "norway", "poland", "portugal", "singapore", "spain", "sweden", "switzerland", "netherlands", "turkey", "uk", "usa"], "isSitRepEnabled": true, "comscore": {"c15": "", "c3": "", "c2": 7130511, "c1": 2, "c6": "", "c5": "", "c4": ""}, "enableHighVolumeGAEvents": false, "isClientErrorsEnabled": false, "spinnerURLLarge": "http://s3-media2.fl.yelpcdn.com/assets/2/www/img/049247849df0/loaders/throbber.gif", "vendorExternalURLs": {}, "cookieDomain": ".www.yelp.com", "recaptchaPublicKey": "6Lc2978SAAAAADHkLB3mdFpNLLfBP5CYnqlR0gz6", "isLive": true, "bingMapsKey": "AjhDhG82AEA_I4CdC-0o2DTDxg1Ojh0AZdcp_o-IbNuJGlb5fMMrig728eetoW8S"};
 
 </script>
             
@@ -9650,14 +9652,14 @@ var c=document.getElementById("adsense-iframe");if(d){c.src="javascript: '<scrip
 
             <script src="http://s3-media4.fl.yelpcdn.com/assets/2/www/js/d56bd43138e5/assets/vendor_external/LAB.min.js"></script><script>$LAB.script("//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
 .wait(function() {if(document.readyState === 'interactive') jQuery.ready();})
-.script("//s3-media4.fl.yelpcdn.com/assets/2/www/js/400f5736c4bb/assets/module_core-en_US.min.js")
+.script("//s3-media4.fl.yelpcdn.com/assets/2/www/js/e2c55ca71386/assets/module_core-en_US.min.js")
 .wait(function() {
                 yConfig.vendorExternalURLs["easyXDM"]=['//s3-media4.fl.yelpcdn.com/assets/2/www/js/62199ef9e869/assets/vendor_external/easyXDM.min.js']
                 
                 yConfig.vendorExternalURLs["plugin-detect"]=['//s3-media4.fl.yelpcdn.com/assets/2/www/js/bfd62b330c7a/assets/vendor_external/plugin-detect-0.6.3.min.js']
-                yelp.www.init.initSearchSuggest("#find_desc", ".find-decorator", "#dropperText_Mast", false, false);
-yelp.www.init.initLocationSuggest("#dropperText_Mast", ".near-decorator", true, false);
-yelp.www.init.initGAUniversal({"domain": "yelp.com", "dimensions": {"1": "anon", "7": "True", "8": "False", "9": "40", "10": "100", "11": "italian", "12": "831", "14": "False", "15": "US"}, "enable_high_volume_events": false, "trackers": {"www": "UA-30501-55"}, "js_dimensions": [16], "clientID": "243ED69EC06DB484"}, [], null);
+                yelp.www.init.initSearchSuggest("#find_desc", ".find-decorator", "#dropperText_Mast", true, true);
+yelp.www.init.initLocationSuggest("#dropperText_Mast", ".near-decorator", true, true);
+yelp.www.init.initGAUniversal({"domain": "yelp.com", "dimensions": {"1": "anon", "7": "True", "8": "False", "9": "40", "10": "100", "11": "italian", "12": "834", "14": "", "15": "US"}, "enable_high_volume_events": false, "trackers": {"www": "UA-30501-55"}, "js_dimensions": [16], "clientID": "27257776C89B92BD"}, [], null);
 yelp.www.init.initNavItemTracking();
 yelp.www.init.initTimeOnPageAnalytics();
 yelp.init.initLocaleSelector("#language-selector-wrap");
@@ -9667,10 +9669,10 @@ yelp.pages.init();
 yelp.www.init.facebook(97534753161, "//connect.facebook.net/en_US/all.js");
 yelp.www.init.quantcast();
 })
-.script("//s3-media1.fl.yelpcdn.com/assets/2/www/js/60a72aa69c8e/assets/module_biz_details-en_US.min.js")
-.wait(function() {yelp.www.init.biz_details.initBookmark(false, "/bookmark/remove_biz_confirm", "8b4ace2ce6bc40268396c5ad0d6dca28476750d45e50c9b0fb51ee1cdcf91760", "2a1a791a99d11ec920f8a5bce6a0863bed6bf6b51a5568aa808298fab2b6741c");
-yelp.www.init.biz_details.sendToFriend("86a00c16bcac6389d4ad4b69d00eea470355f533a33b3889ea9e91b4aef032db");
-yelp.www.init.biz_details.reservations("1b68898a83fdcfbf018d410a7821ce32bcd92dc2bd75494f1dd857e33b67ff78");
+.script("//s3-media1.fl.yelpcdn.com/assets/2/www/js/299bef62dd02/assets/module_biz_details-en_US.min.js")
+.wait(function() {yelp.www.init.biz_details.initBookmark(false, "/bookmark/remove_biz_confirm", "818e025d3a5f61941b37b611de6779bd69e7b1a1dbb285f2044d171b59252f05", "f4d11e76fa1363c7cc121a24389e41871fb33f4ed6169e1a4a3f897a084d315a");
+yelp.www.init.biz_details.sendToFriend("bd2bad9d533718a89fe78d39252d48f39186936b62a2f4cdae678cf04e35167b");
+yelp.www.init.biz_details.reservations("3c7dcaa14e60b76b874d6483b981aa31a08fc2190ec311cbb0202838dfcc8007");
 yelp.www.init.biz_details.initEditCategory(true);
 yelp.www.init.biz_details.initPlatform();
 yelp.www.init.biz_details.initMapLightbox();
@@ -9713,7 +9715,7 @@ $LAB.script("//sb.scorecardresearch.com/beacon.js")
                 if (main === null) {
                     throw 'invalid inline script, missing main declaration.';
                 }
-                main("cf6a154b568873d8");
+                main("74d86774d14480ee");
             })();
     </script>
 
@@ -9739,7 +9741,7 @@ $LAB.script("//sb.scorecardresearch.com/beacon.js")
 
 <script type="text/javascript">
             
-                yConfig.csrf = {"UserFollow": "a8aee4ecb3e798d960598fab7f653abf668c5c08fd3829f4f536ae4764711c0c", "SitRep": "9f70373d9ae3567a88d62fe333cb34d26fc02ca7b35aa75fc29ee46a6a0fd9cc"};
+                yConfig.csrf = {"UserFollow": "6965993fa863c8894740c6d453fddb151b10cf3c4362773749879e4f3ebd62b7", "SitRep": "705e08c708cd6760a4e273e1384a057fe2370e79cf2fc5eec7b9e48c61a9d8ed"};
 
 </script>
 
